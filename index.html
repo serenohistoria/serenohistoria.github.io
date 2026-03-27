@@ -220,7 +220,7 @@
             <div class="card" onclick="openModal('construcciones')">
                 <span class="emoji">🏛️</span>
                 <h3>Construcciones Históricas</h3>
-                <p>Maravillas arquitectónicas</p>
+                <p>Maravillas arquitectónicas antiguas y medievales</p>
             </div>
 
             <div class="card" onclick="alert('Próximamente más contenido')">
@@ -323,25 +323,25 @@
             else if (category === 'construcciones') {
                 title.textContent = 'Construcciones Históricas';
                 html = `
-                    <div class="list-item" onclick="showDetail(this)">Mausoleo real de Mauritania</div>
-                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Teodorico</div>
-                    <div class="list-item" onclick="showDetail(this)">Palacio de Knossos</div>
-                    <div class="list-item" onclick="showDetail(this)">Mausoleo de los emires Qara Qoyunlu</div>
-                    <div class="list-item" onclick="showDetail(this)">Iglesias excavadas en la roca de Lalibela</div>
+                    <div class="list-item" onclick="showDetail(this)">Borgund Stavkirke</div>
+                    <div class="list-item" onclick="showDetail(this)">Castillo de Bran</div>
+                    <div class="list-item" onclick="showDetail(this)">Castillo de la Isla de Trakai</div>
+                    <div class="list-item" onclick="showDetail(this)">Catedral de Etchmiadzin</div>
+                    <div class="list-item" onclick="showDetail(this)">Ciudad armenia de Ani</div>
+                    <div class="list-item" onclick="showDetail(this)">Ciudad subterránea de Derinkuyu</div>
+                    <div class="list-item" onclick="showDetail(this)">Fortaleza de Alamut</div>
                     <div class="list-item" onclick="showDetail(this)">Gran Mezquita de Samarra</div>
-                    <div class="list-item" onclick="showDetail(this)">Torre de Hércules</div>
+                    <div class="list-item" onclick="showDetail(this)">Iglesias excavadas en la roca de Lalibela</div>
                     <div class="list-item" onclick="showDetail(this)">Iglesia de San Ciriaco de Gernrode</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Halicarnaso</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de los emires Qara Qoyunlu</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Teodorico</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo real de Mauritania</div>
+                    <div class="list-item" onclick="showDetail(this)">Palacio de Knossos</div>
                     <div class="list-item" onclick="showDetail(this)">Santa Maria Novella</div>
                     <div class="list-item" onclick="showDetail(this)">Teatro de Aspendios</div>
-                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Halicarnaso</div>
+                    <div class="list-item" onclick="showDetail(this)">Torre de Hércules</div>
                     <div class="list-item" onclick="showDetail(this)">Tumba de Ciro el Grande</div>
-                    <div class="list-item" onclick="showDetail(this)">Catedral de Etchmiadzin</div>
-                    <div class="list-item" onclick="showDetail(this)">Borgund Stavkirke</div>
-                    <div class="list-item" onclick="showDetail(this)">Castillo de la Isla de Trakai</div>
-                    <div class="list-item" onclick="showDetail(this)">Fortaleza de Alamut</div>
-                    <div class="list-item" onclick="showDetail(this)">Ciudad subterránea de Derinkuyu</div>
-                    <div class="list-item" onclick="showDetail(this)">Castillo de Bran</div>
-                    <div class="list-item" onclick="showDetail(this)">Ciudad armenia de Ani</div>
                 `;
             }
 
@@ -351,7 +351,7 @@
 
         function showDetail(element) {
             const name = element.textContent.trim();
-            let info = `<h3>${name}</h3><p>Información detallada sobre ${name} se agregará pronto. Puedes enviarme más datos para enriquecer esta sección.</p>`;
+            let info = `<h3>${name}</h3><p>Información detallada sobre ${name} se agregará pronto.</p>`;
 
             element.innerHTML += `<div class="detail">${info}</div>`;
             element.onclick = null;
