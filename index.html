@@ -197,6 +197,12 @@
         <h2 class="section-title">Explora la Historia</h2>
         
         <div class="grid">
+            <div class="card" onclick="openModal('antiguedad')">
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grandes civilizaciones clásicas</p>
+            </div>
+
             <div class="card" onclick="openModal('medievales')">
                 <span class="emoji">🏰</span>
                 <h3>Naciones Medievales</h3>
@@ -207,12 +213,6 @@
                 <span class="emoji">🏛️</span>
                 <h3>Construcciones Históricas</h3>
                 <p>Maravillas arquitectónicas</p>
-            </div>
-
-            <div class="card" onclick="alert('Próximamente más contenido')">
-                <span class="emoji">🏛️</span>
-                <h3>Naciones de la Antigüedad</h3>
-                <p>Grandes civilizaciones clásicas</p>
             </div>
 
             <div class="card" onclick="alert('Próximamente más contenido')">
@@ -239,35 +239,10 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modal-title">Naciones Medievales</h2>
+                <h2 id="modal-title"></h2>
                 <span class="close" onclick="closeModal()">×</span>
             </div>
-            <div class="modal-body" id="modal-body">
-                <a href="bulgaria.html" class="list-item">Nación Búlgara</a>
-                <a href="#" class="list-item">Nación Croata</a>
-                <a href="#" class="list-item">Nación Armenia</a>
-                <a href="#" class="list-item">Nación Georgiana</a>
-                <a href="#" class="list-item">Nación Rusa</a>
-                <a href="#" class="list-item">Nación Húngara</a>
-                <a href="#" class="list-item">Nación Polaca</a>
-                <a href="#" class="list-item">Nación Escocesa</a>
-                <a href="#" class="list-item">Nación Española</a>
-                <a href="#" class="list-item">Nación Inglesa</a>
-                <a href="#" class="list-item">Nación Italiana</a>
-                <a href="#" class="list-item">Nación Portuguesa</a>
-                <a href="#" class="list-item">Nación Francesa</a>
-                <a href="#" class="list-item">Sacro Imperio Romano Germánico</a>
-                <a href="#" class="list-item">Anglosajones</a>
-                <a href="#" class="list-item">Normandos</a>
-                <a href="#" class="list-item">Hunos</a>
-                <a href="#" class="list-item">Nórdicos / Vikingos</a>
-                <a href="#" class="list-item">Naciones Túrquicas</a>
-                <a href="#" class="list-item">Nación Iraní</a>
-                <a href="#" class="list-item">Mongoles</a>
-                <a href="#" class="list-item">Nación China</a>
-                <a href="#" class="list-item">Nación India</a>
-                <a href="#" class="list-item">Otomanos</a>
-            </div>
+            <div class="modal-body" id="modal-body"></div>
         </div>
     </div>
 
@@ -280,11 +255,89 @@
             const modal = document.getElementById('modal');
             const title = document.getElementById('modal-title');
             const body = document.getElementById('modal-body');
+            let html = '';
 
-            if (category === 'medievales') {
+            if (category === 'antiguedad') {
+                title.textContent = 'Naciones de la Antigüedad';
+                html = `
+                    <a href="#" class="list-item">Asirios</a>
+                    <a href="#" class="list-item">Axum</a>
+                    <a href="#" class="list-item">Cartago</a>
+                    <a href="#" class="list-item">Dacia</a>
+                    <a href="#" class="list-item">Gasánidas</a>
+                    <a href="#" class="list-item">Heftalitas</a>
+                    <a href="#" class="list-item">Hititas</a>
+                    <a href="#" class="list-item">Hunos</a>
+                    <a href="#" class="list-item">Israel</a>
+                    <a href="#" class="list-item">Lajmidas</a>
+                    <a href="#" class="list-item">Lidia</a>
+                    <a href="#" class="list-item">Media Atropatene</a>
+                    <a href="#" class="list-item">Mitanni</a>
+                    <a href="#" class="list-item">Mundo Helenístico</a>
+                    <a href="#" class="list-item">Nabatea</a>
+                    <a href="#" class="list-item">Numidia</a>
+                    <a href="#" class="list-item">Osroene</a>
+                    <a href="#" class="list-item">Palmira</a>
+                    <a href="#" class="list-item">Pueblos Escitas</a>
+                    <a href="#" class="list-item">Roma</a>
+                    <a href="#" class="list-item">Saba</a>
+                `;
+            } 
+            else if (category === 'medievales') {
                 title.textContent = 'Naciones Medievales';
+                html = `
+                    <a href="bulgaria.html" class="list-item">Nación Búlgara</a>
+                    <a href="#" class="list-item">Nación Croata</a>
+                    <a href="#" class="list-item">Nación Armenia</a>
+                    <a href="#" class="list-item">Nación Georgiana</a>
+                    <a href="#" class="list-item">Nación Rusa</a>
+                    <a href="#" class="list-item">Nación Húngara</a>
+                    <a href="#" class="list-item">Nación Polaca</a>
+                    <a href="#" class="list-item">Nación Escocesa</a>
+                    <a href="#" class="list-item">Nación Española</a>
+                    <a href="#" class="list-item">Nación Inglesa</a>
+                    <a href="#" class="list-item">Nación Italiana</a>
+                    <a href="#" class="list-item">Nación Portuguesa</a>
+                    <a href="#" class="list-item">Nación Francesa</a>
+                    <a href="#" class="list-item">Sacro Imperio Romano Germánico</a>
+                    <a href="#" class="list-item">Anglosajones</a>
+                    <a href="#" class="list-item">Normandos</a>
+                    <a href="#" class="list-item">Hunos</a>
+                    <a href="#" class="list-item">Nórdicos / Vikingos</a>
+                    <a href="#" class="list-item">Naciones Túrquicas</a>
+                    <a href="#" class="list-item">Nación Iraní</a>
+                    <a href="#" class="list-item">Mongoles</a>
+                    <a href="#" class="list-item">Nación China</a>
+                    <a href="#" class="list-item">Nación India</a>
+                    <a href="#" class="list-item">Otomanos</a>
+                `;
+            } 
+            else if (category === 'construcciones') {
+                title.textContent = 'Construcciones Históricas';
+                html = `
+                    <a href="#" class="list-item">Borgund Stavkirke</a>
+                    <a href="#" class="list-item">Castillo de Bran</a>
+                    <a href="#" class="list-item">Castillo de la Isla de Trakai</a>
+                    <a href="#" class="list-item">Catedral de Etchmiadzin</a>
+                    <a href="#" class="list-item">Ciudad armenia de Ani</a>
+                    <a href="#" class="list-item">Ciudad subterránea de Derinkuyu</a>
+                    <a href="#" class="list-item">Fortaleza de Alamut</a>
+                    <a href="#" class="list-item">Gran Mezquita de Samarra</a>
+                    <a href="#" class="list-item">Iglesias excavadas en la roca de Lalibela</a>
+                    <a href="#" class="list-item">Iglesia de San Ciriaco de Gernrode</a>
+                    <a href="#" class="list-item">Mausoleo de Halicarnaso</a>
+                    <a href="#" class="list-item">Mausoleo de los emires Qara Qoyunlu</a>
+                    <a href="#" class="list-item">Mausoleo de Teodorico</a>
+                    <a href="#" class="list-item">Mausoleo real de Mauritania</a>
+                    <a href="#" class="list-item">Palacio de Knossos</a>
+                    <a href="#" class="list-item">Santa Maria Novella</a>
+                    <a href="#" class="list-item">Teatro de Aspendios</a>
+                    <a href="#" class="list-item">Torre de Hércules</a>
+                    <a href="#" class="list-item">Tumba de Ciro el Grande</a>
+                `;
             }
 
+            body.innerHTML = html;
             modal.style.display = 'flex';
         }
 
@@ -292,7 +345,6 @@
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Cerrar modal al hacer clic fuera
         window.onclick = function(event) {
             if (event.target.id === 'modal') {
                 closeModal();
