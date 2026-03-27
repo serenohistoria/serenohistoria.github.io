@@ -117,7 +117,7 @@
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.92);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -126,8 +126,8 @@
         .modal-content {
             background: #1a1a1a;
             width: 90%;
-            max-width: 800px;
-            max-height: 85vh;
+            max-width: 820px;
+            max-height: 88vh;
             border-radius: 16px;
             overflow: hidden;
             border: 2px solid var(--accent);
@@ -143,22 +143,23 @@
 
         .modal-header h2 {
             color: var(--accent);
+            margin: 0;
         }
 
         .close {
-            font-size: 2rem;
+            font-size: 2.2rem;
             cursor: pointer;
             color: #aaa;
         }
 
         .modal-body {
             padding: 25px;
-            max-height: 60vh;
+            max-height: 65vh;
             overflow-y: auto;
         }
 
         .list-item {
-            padding: 18px 20px;
+            padding: 18px 22px;
             background: #222;
             margin-bottom: 12px;
             border-radius: 10px;
@@ -168,7 +169,7 @@
 
         .list-item:hover {
             background: #2a2a2a;
-            padding-left: 25px;
+            padding-left: 28px;
         }
 
         .detail {
@@ -177,6 +178,7 @@
             background: #161616;
             border-radius: 10px;
             margin-top: 15px;
+            line-height: 1.7;
         }
 
         footer {
@@ -203,41 +205,40 @@
         <h2 class="section-title">Explora la Historia</h2>
         
         <div class="grid">
-            <div class="card" onclick="openModal('construcciones')">
-                <span class="emoji">🏛️</span>
-                <h3>Construcciones</h3>
-                <p>Pirámides, templos, castillos y maravillas de la ingeniería antigua</p>
-            </div>
-
-            <!-- Puedes agregar onclick a las otras tarjetas más adelante -->
-            <div class="card" onclick="alert('Próximamente más contenido')">
+            <div class="card" onclick="openModal('antiguedad')">
                 <span class="emoji">🏛️</span>
                 <h3>Naciones de la Antigüedad</h3>
-                <p>Grecia, Roma, Egipto y más</p>
+                <p>Grecia, Roma, Egipto, Persia y más</p>
             </div>
 
-            <div class="card" onclick="alert('Próximamente más contenido')">
+            <div class="card" onclick="openModal('medievales')">
                 <span class="emoji">🏰</span>
                 <h3>Naciones Medievales</h3>
-                <p>Reinos y imperios de la Edad Media</p>
+                <p>Reinos europeos, Bizancio, Califatos y más</p>
             </div>
 
-            <div class="card" onclick="alert('Próximamente más contenido')">
+            <div class="card" onclick="openModal('personajes')">
                 <span class="emoji">👑</span>
                 <h3>Personajes Históricos</h3>
-                <p>Líderes legendarios</p>
+                <p>Líderes que cambiaron el mundo</p>
             </div>
 
-            <div class="card" onclick="alert('Próximamente más contenido')">
+            <div class="card" onclick="openModal('batallas')">
                 <span class="emoji">⚔️</span>
                 <h3>Batallas</h3>
-                <p>Las grandes contiendas de la historia</p>
+                <p>Las contiendas más importantes</p>
             </div>
 
-            <div class="card" onclick="alert('Próximamente más contenido')">
+            <div class="card" onclick="openModal('monedas')">
                 <span class="emoji">💰</span>
                 <h3>Monedas</h3>
                 <p>Historia del dinero antiguo</p>
+            </div>
+
+            <div class="card" onclick="openModal('construcciones')">
+                <span class="emoji">🏛️</span>
+                <h3>Construcciones</h3>
+                <p>Maravillas de la ingeniería antigua</p>
             </div>
         </div>
     </main>
@@ -246,12 +247,10 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modal-title">Construcciones</h2>
+                <h2 id="modal-title"></h2>
                 <span class="close" onclick="closeModal()">×</span>
             </div>
-            <div class="modal-body" id="modal-body">
-                <!-- El contenido se carga con JavaScript -->
-            </div>
+            <div class="modal-body" id="modal-body"></div>
         </div>
     </div>
 
@@ -265,9 +264,11 @@
             const title = document.getElementById('modal-title');
             const body = document.getElementById('modal-body');
 
+            let html = '';
+
             if (category === 'construcciones') {
                 title.textContent = 'Grandes Construcciones';
-                body.innerHTML = `
+                html = `
                     <div class="list-item" onclick="showDetail(this)">Pirámide de Giza</div>
                     <div class="list-item" onclick="showDetail(this)">Coliseo de Roma</div>
                     <div class="list-item" onclick="showDetail(this)">Hagia Sophia</div>
@@ -275,41 +276,87 @@
                     <div class="list-item" onclick="showDetail(this)">Muralla China</div>
                     <div class="list-item" onclick="showDetail(this)">Partenón de Atenas</div>
                 `;
+            } 
+            else if (category === 'antiguedad') {
+                title.textContent = 'Naciones de la Antigüedad';
+                html = `
+                    <div class="list-item" onclick="showDetail(this)">Imperio Romano</div>
+                    <div class="list-item" onclick="showDetail(this)">Egipto Faraónico</div>
+                    <div class="list-item" onclick="showDetail(this)">Grecia Clásica</div>
+                    <div class="list-item" onclick="showDetail(this)">Imperio Persa</div>
+                    <div class="list-item" onclick="showDetail(this)">Cartago</div>
+                `;
+            } 
+            else if (category === 'medievales') {
+                title.textContent = 'Naciones Medievales';
+                html = `
+                    <div class="list-item" onclick="showDetail(this)">Imperio Bizantino</div>
+                    <div class="list-item" onclick="showDetail(this)">Al-Ándalus</div>
+                    <div class="list-item" onclick="showDetail(this)">Reino de Francia</div>
+                    <div class="list-item" onclick="showDetail(this)">Sacro Imperio Romano Germánico</div>
+                    <div class="list-item" onclick="showDetail(this)">Japón Feudal</div>
+                `;
+            } 
+            else if (category === 'personajes') {
+                title.textContent = 'Personajes Históricos';
+                html = `
+                    <div class="list-item" onclick="showDetail(this)">Alejandro Magno</div>
+                    <div class="list-item" onclick="showDetail(this)">Julio César</div>
+                    <div class="list-item" onclick="showDetail(this)">Genghis Khan</div>
+                    <div class="list-item" onclick="showDetail(this)">Cleopatra VII</div>
+                    <div class="list-item" onclick="showDetail(this)">Carlomagno</div>
+                    <div class="list-item" onclick="showDetail(this)">Saladino</div>
+                `;
+            } 
+            else if (category === 'batallas') {
+                title.textContent = 'Batallas Legendarias';
+                html = `
+                    <div class="list-item" onclick="showDetail(this)">Termópilas (480 a.C.)</div>
+                    <div class="list-item" onclick="showDetail(this)">Cannas (216 a.C.)</div>
+                    <div class="list-item" onclick="showDetail(this)">Hastings (1066)</div>
+                    <div class="list-item" onclick="showDetail(this)">Poitiers (732)</div>
+                    <div class="list-item" onclick="showDetail(this)">Lepanto (1571)</div>
+                `;
+            } 
+            else if (category === 'monedas') {
+                title.textContent = 'Historia de las Monedas';
+                html = `
+                    <div class="list-item" onclick="showDetail(this)">Dracma Griego</div>
+                    <div class="list-item" onclick="showDetail(this)">Denario Romano</div>
+                    <div class="list-item" onclick="showDetail(this)">Sólido de Oro Bizantino</div>
+                    <div class="list-item" onclick="showDetail(this)">Dinar Islámico</div>
+                    <div class="list-item" onclick="showDetail(this)">Florín de Florencia</div>
+                `;
             }
+
+            body.innerHTML = html;
             modal.style.display = 'flex';
         }
 
         function showDetail(element) {
-            const name = element.textContent;
+            const name = element.textContent.trim();
             let info = '';
 
-            if (name === 'Pirámide de Giza') {
-                info = '<h3>Pirámide de Giza (2580-2560 a.C.)</h3><p>La más grande y antigua de las pirámides de Egipto. Construida para el faraón Keops. Una de las Siete Maravillas del Mundo Antiguo que aún se conserva.</p>';
-            } else if (name === 'Coliseo de Roma') {
-                info = '<h3>Coliseo de Roma (70-80 d.C.)</h3><p>Anfiteatro construido por los emperadores Vespasiano y Tito. Podía albergar hasta 80.000 espectadores para combates de gladiadores y espectáculos públicos.</p>';
-            } else if (name === 'Hagia Sophia') {
-                info = '<h3>Hagia Sophia (537 d.C.)</h3><p>Obra maestra de la arquitectura bizantina en Constantinopla. Su cúpula fue la más grande del mundo durante casi 1000 años.</p>';
-            } else if (name === 'Acueducto de Segovia') {
-                info = '<h3>Acueducto de Segovia (Siglo I-II d.C.)</h3><p>Impresionante obra de ingeniería romana que transportaba agua a la ciudad. Aún se mantiene en pie con 167 arcos.</p>';
-            } else if (name === 'Muralla China') {
-                info = '<h3>Muralla China</h3><p>La fortificación más larga del mundo. Construida y ampliada durante más de 2000 años para proteger China de invasiones.</p>';
-            } else if (name === 'Partenón de Atenas') {
-                info = '<h3>Partenón de Atenas (447-432 a.C.)</h3><p>Templo dedicado a Atenea en la Acrópolis. Símbolo máximo de la arquitectura y democracia griega clásica.</p>';
-            }
+            // Aquí puedes agregar más información después
+            if (name.includes('Pirámide')) info = '<h3>Pirámide de Giza</h3><p>Construida entre 2580-2560 a.C. para el faraón Keops. Es la única de las Siete Maravillas del Mundo Antiguo que aún permanece en pie.</p>';
+            else if (name.includes('Coliseo')) info = '<h3>Coliseo de Roma</h3><p>Inaugurado en el año 80 d.C. Podía albergar 80.000 espectadores y se usaba para combates de gladiadores y espectáculos públicos.</p>';
+            else if (name.includes('Hagia')) info = '<h3>Hagia Sophia</h3><p>Construida en el año 537 por orden del emperador Justiniano. Su enorme cúpula fue una proeza de la ingeniería bizantina.</p>';
+            else if (name.includes('Alejandro')) info = '<h3>Alejandro Magno</h3><p>Conquistó un imperio que iba desde Grecia hasta India antes de cumplir 33 años. Considerado uno de los mejores estrategas militares de la historia.</p>';
+            else if (name.includes('Termópilas')) info = '<h3>Termópilas (480 a.C.)</h3><p>300 espartanos liderados por el rey Leónidas resistieron heroicamente al enorme ejército persa durante tres días.</p>';
+            // Agrega más "else if" según necesites
 
             element.innerHTML += `<div class="detail">${info}</div>`;
-            element.onclick = null; // Evita abrir múltiples veces
+            element.onclick = null; // Evita que se abra varias veces
         }
 
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Cerrar modal al hacer clic fuera
+        // Cerrar al hacer clic fuera del modal
         window.onclick = function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
+            if (event.target.id === 'modal') {
+                closeModal();
             }
         }
     </script>
