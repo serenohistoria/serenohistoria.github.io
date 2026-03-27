@@ -8,72 +8,68 @@
         :root {
             --bg: #0a0a0a;
             --card: #1a1a1a;
-            --accent: #c9a14c; /* Dorado antiguo */
+            --accent: #c9a14c;
             --text: #e0e0e0;
+            --text-light: #bbbbbb;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            min-height: 100vh;
         }
 
         header {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9), var(--bg));
-            padding: 2rem 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95), var(--bg));
+            padding: 3rem 0 2rem;
             text-align: center;
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 4px solid var(--accent);
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
-            text-shadow: 0 0 20px rgba(201, 161, 76, 0.3);
+            text-shadow: 0 0 25px rgba(201, 161, 76, 0.4);
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #aaa;
             font-style: italic;
         }
 
         nav {
             background-color: var(--card);
-            padding: 1rem;
+            padding: 1.2rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
         }
 
         nav a {
             color: var(--text);
             text-decoration: none;
-            margin: 0 1.5rem;
-            font-size: 1.1rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
-            transition: all 0.3s;
+            margin: 0 1.8rem;
+            font-size: 1.15rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
             background-color: var(--accent);
             color: #000;
-            font-weight: bold;
+            transform: translateY(-2px);
         }
 
         main {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 3rem auto;
             padding: 0 2rem;
         }
@@ -83,72 +79,28 @@
             padding: 3rem;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid #333;
             margin-bottom: 4rem;
+            border: 1px solid #333;
         }
 
         .welcome h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
+            font-size: 2.4rem;
             color: var(--accent);
+            margin-bottom: 1rem;
         }
 
-        footer {
+        /* Sección Explorar */
+        .explore-section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            color: var(--accent);
             text-align: center;
-            padding: 2rem;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 4rem;
+            margin-bottom: 2.5rem;
         }
 
-        /* Efecto sutil al hacer scroll */
-        section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Sereno Historia</h1>
-        <p class="subtitle">Imperios, batallas y líderes</p>
-    </header>
-
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Imperios</a>
-        <a href="#">Batallas</a>
-        <a href="#">Líderes</a>
-    </nav>
-
-    <main>
-        <section class="welcome">
-            <h2>Bienvenido</h2>
-            <p>Explora la historia antigua y medieval en profundidad. Descubre los grandes imperios, las batallas legendarias y los líderes que cambiaron el curso de la humanidad.</p>
-        </section>
-
-        <!-- Aquí podrás agregar más secciones después -->
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Sereno Historia • Hecho con pasión por la historia</p>
-    </footer>
-
-    <script>
-        // Pequeña animación al cargar
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('section').forEach((section, index) => {
-                setTimeout(() => {
-                    section.classList.add('visible');
-                }, 300 + index * 200);
-            });
-        });
-    </script>
-</body>
-</html>
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1
