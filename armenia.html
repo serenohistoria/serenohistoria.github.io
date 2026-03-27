@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Armenia - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=80') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Armenia</h1>
+            <p>Antigua y Medieval • 860 a.C. - 1375 d.C.</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html" class="active">Nación Armenia</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            Armenia es una de las naciones más antiguas del mundo, con una historia continua de más de 2500 años. 
+            Fue el primer reino en adoptar el cristianismo como religión oficial en el año 301 d.C.
+        </p>
+
+        <section>
+            <h2>Orígenes Antiguos</h2>
+            <p>El Reino de Urartu (860-590 a.C.) es considerado el precursor directo del pueblo armenio. 
+            Posteriormente, bajo la dinastía Artáxida y Arsácida, Armenia se convirtió en un importante reino entre el Imperio Romano y el Imperio Parto/Persa.</p>
+        </section>
+
+        <section>
+            <h2>La Cristianización (301 d.C.)</h2>
+            <p>El rey Tiridates III declaró el cristianismo como religión oficial del reino en el año 301, haciendo de Armenia el primer estado cristiano de la historia, 
+            12 años antes que el Imperio Romano.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=81" alt="Catedral de Etchmiadzin">
+        </section>
+
+        <section>
+            <h2>El Reino Bagratuni (885-1045)</h2>
+            <p>Después de siglos bajo dominio árabe y bizantino, los Bagratuni restauraron la independencia armenia. 
+            La capital Ani se convirtió en una de las ciudades más bellas y grandes del mundo medieval, conocida como "la ciudad de las 1001 iglesias".</p>
+        </section>
+
+        <section>
+            <h2>Legado Cultural</h2>
+            <p>Los armenios desarrollaron su propio alfabeto en el año 405 por San Mesrob Mashtots. 
+            La Catedral de Etchmiadzin (301 d.C.) es considerada la catedral más antigua del mundo todavía en uso.</p>
+        </section>
+
+        <section>
+            <h2>Caída y Diáspora</h2>
+            <p>Tras la conquista seljúcida y mongola, el último reino armenio independiente cayó en 1375. 
+            Sin embargo, la identidad armenia sobrevivió a través de su iglesia, idioma y cultura.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Armenia</p>
+    </footer>
+</body>
+</html>
