@@ -3,38 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sereno Historia</title>
+    <title>Sereno Historia | Imperios, Batallas y Líderes</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             background-color: #0a0a0a;
             color: #e0e0e0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(#1f1f1f, #0a0a0a);
+            padding: 60px 20px 40px;
             text-align: center;
-            padding: 50px;
+            border-bottom: 5px solid #c9a14c;
         }
+
         h1 {
+            font-size: 3.5rem;
             color: #c9a14c;
-            font-size: 3rem;
+            margin-bottom: 10px;
         }
-        p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 20px auto;
+
+        .subtitle {
+            font-size: 1.6rem;
+            color: #bbbbbb;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #c9a14c;
+            color: black;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            color: #c9a14c;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #c9a14c;
+            box-shadow: 0 15px 30px rgba(201, 161, 76, 0.2);
+        }
+
+        .card h3 {
+            color: #c9a14c;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #bbbbbb;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
-    <h1>Sereno Historia</h1>
-    <p>Imperios, batallas y líderes</p>
-    <p>Bienvenido. Explora la historia antigua y medieval.</p>
-    
-    <h2 style="margin-top: 50px; color: #c9a14c;">Explora la Historia</h2>
-    
-    <p>🏛️ Naciones de la Antigüedad</p>
-    <p>🏰 Naciones Medievales</p>
-    <p>👑 Personajes Históricos</p>
-    <p>⚔️ Batallas</p>
-    <p>💰 Monedas</p>
-    <p>🏛️ Construcciones</p>
+    <header>
+        <h1>Sereno Historia</h1>
+        <p class="subtitle">Imperios, batallas y líderes</p>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="imperios.html">Imperios</a>
+        <a href="batallas.html">Batallas</a>
+        <a href="lideres.html">Líderes</a>
+    </nav>
+
+    <main>
+        <h2 class="section-title">Explora la Historia</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>🏛️ Naciones de la Antigüedad</h3>
+                <p>Grecia, Roma, Egipto, Persia, Cartago y las grandes civilizaciones clásicas.</p>
+            </div>
+            <div class="card">
+                <h3>🏰 Naciones Medievales</h3>
+                <p>Reinos de Europa, Bizancio, Califatos, Japón feudal y el mundo vikingo.</p>
+            </div>
+            <div class="card">
+                <h3>👑 Personajes Históricos</h3>
+                <p>Emperadores, reyes, conquistadores y figuras legendarias que cambiaron la historia.</p>
+            </div>
+            <div class="card">
+                <h3>⚔️ Batallas</h3>
+                <p>Las contiendas más importantes y decisivas de la Antigüedad y Edad Media.</p>
+            </div>
+            <div class="card">
+                <h3>💰 Monedas</h3>
+                <p>Historia de la moneda, denarios, áureos, dirhams y sistemas económicos antiguos.</p>
+            </div>
+            <div class="card">
+                <h3>🏛️ Construcciones</h3>
+                <p>Pirámides, acueductos, castillos, catedrales y maravillas de la ingeniería antigua.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Hecho con pasión por la historia</p>
+    </footer>
 </body>
 </html>
