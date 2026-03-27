@@ -5,103 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sereno Historia | Imperios, Batallas y Líderes</title>
     <style>
-        body {
+        :root {
+            --bg: #0a0a0a;
+            --card: #161616;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
         }
 
         header {
-            background: linear-gradient(#1f1f1f, #0a0a0a);
-            padding: 60px 20px 40px;
+            background: linear-gradient(to bottom, #1c1c1c, var(--bg));
+            padding: 80px 20px 60px;
             text-align: center;
-            border-bottom: 5px solid #c9a14c;
+            border-bottom: 6px solid var(--accent);
         }
 
         h1 {
-            font-size: 3.5rem;
-            color: #c9a14c;
-            margin-bottom: 10px;
+            font-size: 4.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            margin-bottom: 12px;
         }
 
         .subtitle {
-            font-size: 1.6rem;
-            color: #bbbbbb;
+            font-size: 1.7rem;
+            color: #cccccc;
             font-style: italic;
+            letter-spacing: 1px;
         }
 
         nav {
-            background-color: #1a1a1a;
-            padding: 20px;
+            background-color: #111;
+            padding: 22px 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
         }
 
         nav a {
-            color: #e0e0e0;
+            color: var(--text);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: 0.3s;
+            margin: 0 20px;
+            font-size: 1.25rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
         }
 
         nav a:hover {
-            background-color: #c9a14c;
-            color: black;
+            background-color: var(--accent);
+            color: #000;
+            transform: scale(1.05);
         }
 
         main {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .welcome p {
+            font-size: 1.35rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-light);
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.4rem;
-            color: #c9a14c;
-            margin-bottom: 40px;
+            font-size: 2.6rem;
+            color: var(--accent);
+            margin: 70px 0 45px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
         }
 
         .card {
-            background-color: #1a1a1a;
-            border-radius: 12px;
-            padding: 30px 20px;
+            background-color: var(--card);
+            border-radius: 16px;
+            padding: 32px 28px;
             text-align: center;
             border: 1px solid #333;
-            transition: all 0.4s;
+            transition: all 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            border-color: #c9a14c;
-            box-shadow: 0 15px 30px rgba(201, 161, 76, 0.2);
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
         }
 
         .card h3 {
-            color: #c9a14c;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.55rem;
+            color: var(--accent);
+            margin: 18px 0 14px;
         }
 
         .card p {
-            color: #bbbbbb;
-            line-height: 1.5;
+            color: var(--text-light);
+            font-size: 1.02rem;
+            line-height: 1.65;
+        }
+
+        .emoji {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            display: block;
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #666;
+            padding: 60px 20px 40px;
+            color: #555;
             font-size: 1rem;
         }
     </style>
@@ -109,43 +151,58 @@
 <body>
     <header>
         <h1>Sereno Historia</h1>
-        <p class="subtitle">Imperios, batallas y líderes</p>
+        <p class="subtitle">Imperios • Batallas • Líderes</p>
     </header>
 
     <nav>
-        <a href="#">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="imperios.html">Imperios</a>
         <a href="batallas.html">Batallas</a>
         <a href="lideres.html">Líderes</a>
     </nav>
 
     <main>
+        <div class="welcome">
+            <p>Explora en profundidad la historia antigua y medieval. Descubre civilizaciones, líderes legendarios y eventos que cambiaron el mundo.</p>
+        </div>
+
         <h2 class="section-title">Explora la Historia</h2>
         
         <div class="grid">
             <div class="card">
-                <h3>🏛️ Naciones de la Antigüedad</h3>
-                <p>Grecia, Roma, Egipto, Persia, Cartago y las grandes civilizaciones clásicas.</p>
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grecia, Roma, Egipto, Persia, Cartago y las grandes civilizaciones clásicas que sentaron las bases de Occidente.</p>
             </div>
+
             <div class="card">
-                <h3>🏰 Naciones Medievales</h3>
-                <p>Reinos de Europa, Bizancio, Califatos, Japón feudal y el mundo vikingo.</p>
+                <span class="emoji">🏰</span>
+                <h3>Naciones Medievales</h3>
+                <p>Reinos europeos, Bizancio, Califatos islámicos, Japón feudal y el mundo vikingo.</p>
             </div>
+
             <div class="card">
-                <h3>👑 Personajes Históricos</h3>
-                <p>Emperadores, reyes, conquistadores y figuras legendarias que cambiaron la historia.</p>
+                <span class="emoji">👑</span>
+                <h3>Personajes Históricos</h3>
+                <p>Emperadores, reyes, conquistadores y figuras legendarias que marcaron el destino de la humanidad.</p>
             </div>
+
             <div class="card">
-                <h3>⚔️ Batallas</h3>
-                <p>Las contiendas más importantes y decisivas de la Antigüedad y Edad Media.</p>
+                <span class="emoji">⚔️</span>
+                <h3>Batallas</h3>
+                <p>Las contiendas más importantes y decisivas de la Antigüedad y la Edad Media.</p>
             </div>
+
             <div class="card">
-                <h3>💰 Monedas</h3>
-                <p>Historia de la moneda, denarios, áureos, dirhams y sistemas económicos antiguos.</p>
+                <span class="emoji">💰</span>
+                <h3>Monedas</h3>
+                <p>La evolución del dinero: denarios romanos, áureos, dirhams y sistemas económicos antiguos.</p>
             </div>
+
             <div class="card">
-                <h3>🏛️ Construcciones</h3>
-                <p>Pirámides, acueductos, castillos, catedrales y maravillas de la ingeniería antigua.</p>
+                <span class="emoji">🏛️</span>
+                <h3>Construcciones</h3>
+                <p>Pirámides, acueductos, castillos, Hagia Sophia y las grandes maravillas de la ingeniería antigua.</p>
             </div>
         </div>
     </main>
