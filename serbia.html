@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Serbia - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=60') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Imperio Serbio</h1>
+            <p>Siglo XIV - Reino de Serbia Medieval</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html" class="active">Nación Serbia</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Reino de Serbia medieval, especialmente durante la dinastía Nemanjić, representó uno de los estados más poderosos y culturalmente ricos de los Balcanes en la Edad Media.
+        </p>
+
+        <section>
+            <h2>Origen y Fundación</h2>
+            <p>La dinastía Nemanjić fue fundada por Stefan Nemanja en el siglo XII. Desde entonces, los serbios comenzaron a consolidar un estado fuerte en los Balcanes, expandiéndose territorialmente y desarrollando una identidad propia.</p>
+        </section>
+
+        <section>
+            <h2>Época de Oro: Stefan Dušan</h2>
+            <p>Bajo el reinado de Stefan Uroš IV Dušan (1331-1355), Serbia alcanzó su máximo esplendor. Dušan se coronó como "Emperador de los serbios y romanos" en 1346 y creó el Código de Dušan, uno de los documentos legales más importantes de la época medieval.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=61" alt="Stefan Dušan">
+        </section>
+
+        <section>
+            <h2>Religión y Cultura</h2>
+            <p>La Iglesia Ortodoxa Serbia jugó un papel fundamental. El Patriarcado de Peć fue establecido en 1346. La arquitectura religiosa serbia, como los monasterios de Studenica, Gračanica y Dečani, son considerados joyas del arte medieval bizantino-serbio.</p>
+        </section>
+
+        <section>
+            <h2>Caída del Imperio</h2>
+            <p>Tras la muerte de Dušan, el imperio se fragmentó. La derrota en la Batalla de Kosovo (1389) contra los otomanos marcó el inicio del declive serbio, culminando con la caída bajo dominio otomano en el siglo XV.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Los serbios medievales dejaron un rico legado cultural, artístico y religioso que aún influye en la identidad serbia actual, especialmente a través de sus monasterios declarados Patrimonio de la Humanidad por la UNESCO.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Serbia</p>
+    </footer>
+</body>
+</html>
