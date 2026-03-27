@@ -7,32 +7,41 @@
     <style>
         body {
             background-color: #0a0a0a;
-            color: #f0f0f0;
+            color: #e0e0e0;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 60px 20px;
         }
         h1 {
             color: #d4af37;
             font-size: 3.5rem;
         }
         p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             max-width: 800px;
             margin: 30px auto;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
+        .buttons {
             margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
-        .card {
-            background: #1a1a1a;
-            padding: 30px;
+        .btn {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            padding: 20px 30px;
             border-radius: 12px;
-            border: 1px solid #444;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border: 2px solid #444;
+            min-width: 280px;
+        }
+        .btn:hover {
+            background-color: #d4af37;
+            color: #000;
+            border-color: #d4af37;
         }
     </style>
 </head>
@@ -40,21 +49,19 @@
     <h1>Sereno Historia</h1>
     <p>Imperios, batallas y líderes</p>
 
-    <div class="grid">
-        <div class="card">
-            <h2>🏛️ Naciones de la Antigüedad</h2>
-            <p>Grandes civilizaciones clásicas</p>
-        </div>
-        <div class="card">
-            <h2>🏰 Naciones Medievales</h2>
-            <p>Reinos y pueblos de la Edad Media</p>
-        </div>
-        <div class="card">
-            <h2>🏛️ Construcciones Históricas</h2>
-            <p>Maravillas arquitectónicas</p>
-        </div>
+    <div class="buttons">
+        <a href="imperios.html" class="btn">Imperios</a>
+        <a href="batallas.html" class="btn">Batallas</a>
+        <a href="lideres.html" class="btn">Líderes</a>
+        <a href="bulgaria.html" class="btn">Nación Búlgara</a>
+        <a href="serbia.html" class="btn">Nación Serbia</a>
+        <a href="croacia.html" class="btn">Nación Croata</a>
+        <a href="armenia.html" class="btn">Nación Armenia</a>
     </div>
 
-    <p><strong>Las otras secciones (Bulgaria, Serbia, Croacia, Armenia, Georgia) ya están creadas.</strong></p>
+    <p style="margin-top: 80px; color: #777;">
+        Estamos reconstruyendo la página principal.<br>
+        Las páginas individuales ya están creadas.
+    </p>
 </body>
 </html>
