@@ -174,11 +174,11 @@
 
         .detail {
             display: none;
-            padding: 20px;
+            padding: 22px;
             background: #161616;
             border-radius: 10px;
             margin-top: 15px;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         footer {
@@ -205,40 +205,41 @@
         <h2 class="section-title">Explora la Historia</h2>
         
         <div class="grid">
-            <div class="card" onclick="openModal('antiguedad')">
-                <span class="emoji">🏛️</span>
-                <h3>Naciones de la Antigüedad</h3>
-                <p>Grecia, Roma, Egipto, Persia y más</p>
-            </div>
-
             <div class="card" onclick="openModal('medievales')">
                 <span class="emoji">🏰</span>
                 <h3>Naciones Medievales</h3>
-                <p>Reinos europeos, Bizancio, Califatos y más</p>
-            </div>
-
-            <div class="card" onclick="openModal('personajes')">
-                <span class="emoji">👑</span>
-                <h3>Personajes Históricos</h3>
-                <p>Líderes que cambiaron el mundo</p>
-            </div>
-
-            <div class="card" onclick="openModal('batallas')">
-                <span class="emoji">⚔️</span>
-                <h3>Batallas</h3>
-                <p>Las contiendas más importantes</p>
-            </div>
-
-            <div class="card" onclick="openModal('monedas')">
-                <span class="emoji">💰</span>
-                <h3>Monedas</h3>
-                <p>Historia del dinero antiguo</p>
+                <p>Reinos y pueblos de la Edad Media</p>
             </div>
 
             <div class="card" onclick="openModal('construcciones')">
                 <span class="emoji">🏛️</span>
-                <h3>Construcciones</h3>
-                <p>Maravillas de la ingeniería antigua</p>
+                <h3>Construcciones Históricas</h3>
+                <p>Maravillas arquitectónicas antiguas y medievales</p>
+            </div>
+
+            <!-- Las otras tarjetas con mensaje temporal -->
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grecia, Roma, Egipto y más</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">👑</span>
+                <h3>Personajes Históricos</h3>
+                <p>Líderes legendarios</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">⚔️</span>
+                <h3>Batallas</h3>
+                <p>Las grandes contiendas</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">💰</span>
+                <h3>Monedas</h3>
+                <p>Historia del dinero antiguo</p>
             </div>
         </div>
     </main>
@@ -263,69 +264,59 @@
             const modal = document.getElementById('modal');
             const title = document.getElementById('modal-title');
             const body = document.getElementById('modal-body');
-
             let html = '';
 
-            if (category === 'construcciones') {
-                title.textContent = 'Grandes Construcciones';
-                html = `
-                    <div class="list-item" onclick="showDetail(this)">Pirámide de Giza</div>
-                    <div class="list-item" onclick="showDetail(this)">Coliseo de Roma</div>
-                    <div class="list-item" onclick="showDetail(this)">Hagia Sophia</div>
-                    <div class="list-item" onclick="showDetail(this)">Acueducto de Segovia</div>
-                    <div class="list-item" onclick="showDetail(this)">Muralla China</div>
-                    <div class="list-item" onclick="showDetail(this)">Partenón de Atenas</div>
-                `;
-            } 
-            else if (category === 'antiguedad') {
-                title.textContent = 'Naciones de la Antigüedad';
-                html = `
-                    <div class="list-item" onclick="showDetail(this)">Imperio Romano</div>
-                    <div class="list-item" onclick="showDetail(this)">Egipto Faraónico</div>
-                    <div class="list-item" onclick="showDetail(this)">Grecia Clásica</div>
-                    <div class="list-item" onclick="showDetail(this)">Imperio Persa</div>
-                    <div class="list-item" onclick="showDetail(this)">Cartago</div>
-                `;
-            } 
-            else if (category === 'medievales') {
+            if (category === 'medievales') {
                 title.textContent = 'Naciones Medievales';
                 html = `
-                    <div class="list-item" onclick="showDetail(this)">Imperio Bizantino</div>
-                    <div class="list-item" onclick="showDetail(this)">Al-Ándalus</div>
-                    <div class="list-item" onclick="showDetail(this)">Reino de Francia</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Búlgara</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Croata</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Armenia</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Georgiana</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Rusa</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Húngara</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Polaca</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Escocesa</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Española</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Inglesa</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Italiana</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Portuguesa</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Francesa</div>
                     <div class="list-item" onclick="showDetail(this)">Sacro Imperio Romano Germánico</div>
-                    <div class="list-item" onclick="showDetail(this)">Japón Feudal</div>
+                    <div class="list-item" onclick="showDetail(this)">Anglosajones</div>
+                    <div class="list-item" onclick="showDetail(this)">Normandos</div>
+                    <div class="list-item" onclick="showDetail(this)">Hunos</div>
+                    <div class="list-item" onclick="showDetail(this)">Nórdicos / Vikingos</div>
+                    <div class="list-item" onclick="showDetail(this)">Naciones Túrquicas</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación Iraní</div>
+                    <div class="list-item" onclick="showDetail(this)">Mongoles</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación China</div>
+                    <div class="list-item" onclick="showDetail(this)">Nación India</div>
+                    <div class="list-item" onclick="showDetail(this)">Otomanos</div>
                 `;
             } 
-            else if (category === 'personajes') {
-                title.textContent = 'Personajes Históricos';
+            else if (category === 'construcciones') {
+                title.textContent = 'Construcciones Históricas';
                 html = `
-                    <div class="list-item" onclick="showDetail(this)">Alejandro Magno</div>
-                    <div class="list-item" onclick="showDetail(this)">Julio César</div>
-                    <div class="list-item" onclick="showDetail(this)">Genghis Khan</div>
-                    <div class="list-item" onclick="showDetail(this)">Cleopatra VII</div>
-                    <div class="list-item" onclick="showDetail(this)">Carlomagno</div>
-                    <div class="list-item" onclick="showDetail(this)">Saladino</div>
-                `;
-            } 
-            else if (category === 'batallas') {
-                title.textContent = 'Batallas Legendarias';
-                html = `
-                    <div class="list-item" onclick="showDetail(this)">Termópilas (480 a.C.)</div>
-                    <div class="list-item" onclick="showDetail(this)">Cannas (216 a.C.)</div>
-                    <div class="list-item" onclick="showDetail(this)">Hastings (1066)</div>
-                    <div class="list-item" onclick="showDetail(this)">Poitiers (732)</div>
-                    <div class="list-item" onclick="showDetail(this)">Lepanto (1571)</div>
-                `;
-            } 
-            else if (category === 'monedas') {
-                title.textContent = 'Historia de las Monedas';
-                html = `
-                    <div class="list-item" onclick="showDetail(this)">Dracma Griego</div>
-                    <div class="list-item" onclick="showDetail(this)">Denario Romano</div>
-                    <div class="list-item" onclick="showDetail(this)">Sólido de Oro Bizantino</div>
-                    <div class="list-item" onclick="showDetail(this)">Dinar Islámico</div>
-                    <div class="list-item" onclick="showDetail(this)">Florín de Florencia</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo Real de Mauritania</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Teodorico</div>
+                    <div class="list-item" onclick="showDetail(this)">Palacio de Knossos</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de los emires Qara Qoyunlu</div>
+                    <div class="list-item" onclick="showDetail(this)">Iglesias excavadas en la roca de Lalibela</div>
+                    <div class="list-item" onclick="showDetail(this)">Gran Mezquita de Samarra</div>
+                    <div class="list-item" onclick="showDetail(this)">Torre de Hércules</div>
+                    <div class="list-item" onclick="showDetail(this)">Iglesia de San Ciriaco de Gernrode</div>
+                    <div class="list-item" onclick="showDetail(this)">Santa Maria Novella</div>
+                    <div class="list-item" onclick="showDetail(this)">Teatro de Aspendios</div>
+                    <div class="list-item" onclick="showDetail(this)">Mausoleo de Halicarnaso</div>
+                    <div class="list-item" onclick="showDetail(this)">Tumba de Ciro el Grande</div>
+                    <div class="list-item" onclick="showDetail(this)">Catedral de Etchmiadzin</div>
+                    <div class="list-item" onclick="showDetail(this)">Borgund Stavkirke</div>
+                    <div class="list-item" onclick="showDetail(this)">Castillo de la Isla de Trakai</div>
+                    <div class="list-item" onclick="showDetail(this)">Fortaleza de Alamut</div>
+                    <div class="list-item" onclick="showDetail(this)">Ciudad subterránea de Derinkuyu</div>
+                    <div class="list-item" onclick="showDetail(this)">Castillo de Bran</div>
+                    <div class="list-item" onclick="showDetail(this)">Ciudad armenia de Ani</div>
                 `;
             }
 
@@ -335,29 +326,18 @@
 
         function showDetail(element) {
             const name = element.textContent.trim();
-            let info = '';
-
-            // Aquí puedes agregar más información después
-            if (name.includes('Pirámide')) info = '<h3>Pirámide de Giza</h3><p>Construida entre 2580-2560 a.C. para el faraón Keops. Es la única de las Siete Maravillas del Mundo Antiguo que aún permanece en pie.</p>';
-            else if (name.includes('Coliseo')) info = '<h3>Coliseo de Roma</h3><p>Inaugurado en el año 80 d.C. Podía albergar 80.000 espectadores y se usaba para combates de gladiadores y espectáculos públicos.</p>';
-            else if (name.includes('Hagia')) info = '<h3>Hagia Sophia</h3><p>Construida en el año 537 por orden del emperador Justiniano. Su enorme cúpula fue una proeza de la ingeniería bizantina.</p>';
-            else if (name.includes('Alejandro')) info = '<h3>Alejandro Magno</h3><p>Conquistó un imperio que iba desde Grecia hasta India antes de cumplir 33 años. Considerado uno de los mejores estrategas militares de la historia.</p>';
-            else if (name.includes('Termópilas')) info = '<h3>Termópilas (480 a.C.)</h3><p>300 espartanos liderados por el rey Leónidas resistieron heroicamente al enorme ejército persa durante tres días.</p>';
-            // Agrega más "else if" según necesites
+            let info = `<h3>${name}</h3><p>Información detallada sobre ${name} se agregará pronto. Puedes enviarme más datos para enriquecer esta sección.</p>`;
 
             element.innerHTML += `<div class="detail">${info}</div>`;
-            element.onclick = null; // Evita que se abra varias veces
+            element.onclick = null;
         }
 
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Cerrar al hacer clic fuera del modal
         window.onclick = function(event) {
-            if (event.target.id === 'modal') {
-                closeModal();
-            }
+            if (event.target.id === 'modal') closeModal();
         }
     </script>
 </body>
