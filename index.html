@@ -13,18 +13,13 @@
             --text-light: #aaaaaa;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            background-image: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
         }
 
         header {
@@ -38,14 +33,12 @@
             font-size: 4.2rem;
             color: var(--accent);
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-            margin-bottom: 12px;
         }
 
         .subtitle {
             font-size: 1.7rem;
             color: #cccccc;
             font-style: italic;
-            letter-spacing: 1px;
         }
 
         nav {
@@ -55,7 +48,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
         }
 
         nav a {
@@ -65,13 +57,12 @@
             font-size: 1.25rem;
             padding: 14px 28px;
             border-radius: 50px;
-            transition: all 0.4s ease;
+            transition: all 0.4s;
         }
 
         nav a:hover {
             background-color: var(--accent);
             color: #000;
-            transform: scale(1.05);
         }
 
         main {
@@ -80,24 +71,11 @@
             padding: 0 25px;
         }
 
-        .welcome {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .welcome p {
-            font-size: 1.35rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--text-light);
-        }
-
         .section-title {
             text-align: center;
             font-size: 2.6rem;
             color: var(--accent);
-            margin: 70px 0 45px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            margin: 60px 0 50px;
         }
 
         .grid {
@@ -109,41 +87,102 @@
         .card {
             background-color: var(--card);
             border-radius: 16px;
-            padding: 32px 28px;
+            padding: 40px 30px;
             text-align: center;
             border: 1px solid #333;
-            transition: all 0.4s ease;
+            cursor: pointer;
+            transition: all 0.4s;
         }
 
         .card:hover {
             transform: translateY(-12px);
             border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
-        }
-
-        .card h3 {
-            font-size: 1.55rem;
-            color: var(--accent);
-            margin: 18px 0 14px;
-        }
-
-        .card p {
-            color: var(--text-light);
-            font-size: 1.02rem;
-            line-height: 1.65;
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
         }
 
         .emoji {
-            font-size: 2.8rem;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--accent);
+            font-size: 1.7rem;
             margin-bottom: 10px;
-            display: block;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+        }
+
+        .modal-header {
+            padding: 20px 25px;
+            background: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: var(--accent);
+        }
+
+        .close {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .modal-body {
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .list-item {
+            padding: 18px 20px;
+            background: #222;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .list-item:hover {
+            background: #2a2a2a;
+            padding-left: 25px;
+        }
+
+        .detail {
+            display: none;
+            padding: 20px;
+            background: #161616;
+            border-radius: 10px;
+            margin-top: 15px;
         }
 
         footer {
             text-align: center;
             padding: 60px 20px 40px;
             color: #555;
-            font-size: 1rem;
         }
     </style>
 </head>
@@ -161,53 +200,118 @@
     </nav>
 
     <main>
-        <div class="welcome">
-            <p>Explora en profundidad la historia antigua y medieval. Descubre civilizaciones, líderes legendarios y eventos que cambiaron el mundo.</p>
-        </div>
-
         <h2 class="section-title">Explora la Historia</h2>
         
         <div class="grid">
-            <div class="card">
-                <span class="emoji">🏛️</span>
-                <h3>Naciones de la Antigüedad</h3>
-                <p>Grecia, Roma, Egipto, Persia, Cartago y las grandes civilizaciones clásicas que sentaron las bases de Occidente.</p>
-            </div>
-
-            <div class="card">
-                <span class="emoji">🏰</span>
-                <h3>Naciones Medievales</h3>
-                <p>Reinos europeos, Bizancio, Califatos islámicos, Japón feudal y el mundo vikingo.</p>
-            </div>
-
-            <div class="card">
-                <span class="emoji">👑</span>
-                <h3>Personajes Históricos</h3>
-                <p>Emperadores, reyes, conquistadores y figuras legendarias que marcaron el destino de la humanidad.</p>
-            </div>
-
-            <div class="card">
-                <span class="emoji">⚔️</span>
-                <h3>Batallas</h3>
-                <p>Las contiendas más importantes y decisivas de la Antigüedad y la Edad Media.</p>
-            </div>
-
-            <div class="card">
-                <span class="emoji">💰</span>
-                <h3>Monedas</h3>
-                <p>La evolución del dinero: denarios romanos, áureos, dirhams y sistemas económicos antiguos.</p>
-            </div>
-
-            <div class="card">
+            <div class="card" onclick="openModal('construcciones')">
                 <span class="emoji">🏛️</span>
                 <h3>Construcciones</h3>
-                <p>Pirámides, acueductos, castillos, Hagia Sophia y las grandes maravillas de la ingeniería antigua.</p>
+                <p>Pirámides, templos, castillos y maravillas de la ingeniería antigua</p>
+            </div>
+
+            <!-- Puedes agregar onclick a las otras tarjetas más adelante -->
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grecia, Roma, Egipto y más</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">🏰</span>
+                <h3>Naciones Medievales</h3>
+                <p>Reinos y imperios de la Edad Media</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">👑</span>
+                <h3>Personajes Históricos</h3>
+                <p>Líderes legendarios</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">⚔️</span>
+                <h3>Batallas</h3>
+                <p>Las grandes contiendas de la historia</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">💰</span>
+                <h3>Monedas</h3>
+                <p>Historia del dinero antiguo</p>
             </div>
         </div>
     </main>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Construcciones</h2>
+                <span class="close" onclick="closeModal()">×</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- El contenido se carga con JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Sereno Historia • Hecho con pasión por la historia</p>
     </footer>
+
+    <script>
+        function openModal(category) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+
+            if (category === 'construcciones') {
+                title.textContent = 'Grandes Construcciones';
+                body.innerHTML = `
+                    <div class="list-item" onclick="showDetail(this)">Pirámide de Giza</div>
+                    <div class="list-item" onclick="showDetail(this)">Coliseo de Roma</div>
+                    <div class="list-item" onclick="showDetail(this)">Hagia Sophia</div>
+                    <div class="list-item" onclick="showDetail(this)">Acueducto de Segovia</div>
+                    <div class="list-item" onclick="showDetail(this)">Muralla China</div>
+                    <div class="list-item" onclick="showDetail(this)">Partenón de Atenas</div>
+                `;
+            }
+            modal.style.display = 'flex';
+        }
+
+        function showDetail(element) {
+            const name = element.textContent;
+            let info = '';
+
+            if (name === 'Pirámide de Giza') {
+                info = '<h3>Pirámide de Giza (2580-2560 a.C.)</h3><p>La más grande y antigua de las pirámides de Egipto. Construida para el faraón Keops. Una de las Siete Maravillas del Mundo Antiguo que aún se conserva.</p>';
+            } else if (name === 'Coliseo de Roma') {
+                info = '<h3>Coliseo de Roma (70-80 d.C.)</h3><p>Anfiteatro construido por los emperadores Vespasiano y Tito. Podía albergar hasta 80.000 espectadores para combates de gladiadores y espectáculos públicos.</p>';
+            } else if (name === 'Hagia Sophia') {
+                info = '<h3>Hagia Sophia (537 d.C.)</h3><p>Obra maestra de la arquitectura bizantina en Constantinopla. Su cúpula fue la más grande del mundo durante casi 1000 años.</p>';
+            } else if (name === 'Acueducto de Segovia') {
+                info = '<h3>Acueducto de Segovia (Siglo I-II d.C.)</h3><p>Impresionante obra de ingeniería romana que transportaba agua a la ciudad. Aún se mantiene en pie con 167 arcos.</p>';
+            } else if (name === 'Muralla China') {
+                info = '<h3>Muralla China</h3><p>La fortificación más larga del mundo. Construida y ampliada durante más de 2000 años para proteger China de invasiones.</p>';
+            } else if (name === 'Partenón de Atenas') {
+                info = '<h3>Partenón de Atenas (447-432 a.C.)</h3><p>Templo dedicado a Atenea en la Acrópolis. Símbolo máximo de la arquitectura y democracia griega clásica.</p>';
+            }
+
+            element.innerHTML += `<div class="detail">${info}</div>`;
+            element.onclick = null; // Evita abrir múltiples veces
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
