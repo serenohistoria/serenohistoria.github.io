@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Croata - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=70') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Croacia</h1>
+            <p>Siglos VII - XI • Reino Medieval Croata</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html" class="active">Nación Croata</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Reino de Croacia medieval fue uno de los primeros reinos eslavo-cristianos establecidos en los Balcanes. 
+            Tuvo un importante papel en la historia de Europa Central y del Adriático.
+        </p>
+
+        <section>
+            <h2>Origen y Migración</h2>
+            <p>Los croatas llegaron a la región del Adriático en el siglo VII como parte de las grandes migraciones eslavas. 
+            Se establecieron en el territorio que hoy corresponde a Croacia, Bosnia y partes de Serbia y Montenegro.</p>
+        </section>
+
+        <section>
+            <h2>El Reino de Croacia (925-1102)</h2>
+            <p>En el año 925, Tomislav se coronó como el primer rey de Croacia, uniendo a las tribus croatas y creando un reino fuerte. 
+            Durante su reinado, Croacia se expandió significativamente y defendió sus fronteras contra los búlgaros y los bizantinos.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=71" alt="Reino de Croacia">
+        </section>
+
+        <section>
+            <h2>Cristianización y Cultura</h2>
+            <p>Los croatas se convirtieron al cristianismo católico en el siglo IX. 
+            Desarrollaron una rica tradición cultural, incluyendo el uso del glagolítico (el alfabeto eslavo más antiguo) y una arquitectura románica característica en la costa adriática.</p>
+        </section>
+
+        <section>
+            <h2>La Unión con Hungría</h2>
+            <p>En el año 1102, tras la extinción de la dinastía Trpimirović, Croacia entró en una unión personal con el Reino de Hungría. 
+            Mantuvo cierta autonomía durante siglos, pero gradualmente perdió independencia.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>El Reino Medieval Croata es considerado el fundamento del estado croata moderno. Su historia de resistencia, cristianización y desarrollo cultural sigue siendo un pilar importante de la identidad croata.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Croata</p>
+    </footer>
+</body>
+</html>
