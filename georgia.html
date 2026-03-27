@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Georgiana - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=90') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Georgia</h1>
+            <p>Edad Media • Reino de Georgia (1008-1490)</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html" class="active">Nación Georgiana</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Reino de Georgia medieval, conocido como "el Reino de las Rosas y el Vino", fue uno de los estados más poderosos del Cáucaso durante los siglos XI al XIII.
+        </p>
+
+        <section>
+            <h2>La Edad de Oro</h2>
+            <p>Bajo el reinado de David IV el Constructor (1089-1125) y especialmente durante la reina Tamar (1184-1213), Georgia alcanzó su máximo esplendor territorial y cultural. 
+            Se extendió desde el Mar Negro hasta el Caspio.</p>
+        </section>
+
+        <section>
+            <h2>Cultura y Arquitectura</h2>
+            <p>Georgia desarrolló una arquitectura religiosa única, con monasterios como Gelati, Vardzia y Svetitskhoveli. 
+            La reina Tamar es considerada una de las monarcas más importantes de la historia georgiana y es santa en la Iglesia Ortodoxa Georgiana.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=91" alt="Reino de Georgia">
+        </section>
+
+        <section>
+            <h2>Religión</h2>
+            <p>El cristianismo llegó a Georgia en el siglo IV. La Iglesia Ortodoxa Georgiana es una de las más antiguas del mundo y mantuvo su independencia a lo largo de los siglos.</p>
+        </section>
+
+        <section>
+            <h2>Caída</h2>
+            <p>Tras las invasiones mongolas y timúridas, el reino se fragmentó en varios principados. Georgia perdió su independencia definitiva en el siglo XIX ante el Imperio Ruso.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Georgia preservó una rica tradición literaria, musical y arquitectónica. Su historia de resistencia y su identidad cristiana son pilares fundamentales de la nación georgiana actual.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Georgiana</p>
+    </footer>
+</body>
+</html>
