@@ -3,65 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sereno Historia</title>
+    <title>Sereno Historia | Imperios, Batallas y Líderes</title>
     <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #161616;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #1c1c1c, var(--bg));
+            padding: 80px 20px 60px;
             text-align: center;
-            padding: 60px 20px;
+            border-bottom: 6px solid var(--accent);
         }
+
         h1 {
-            color: #d4af37;
-            font-size: 3.5rem;
+            font-size: 4.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
         }
-        p {
-            font-size: 1.4rem;
-            max-width: 800px;
-            margin: 30px auto;
+
+        .subtitle {
+            font-size: 1.7rem;
+            color: #cccccc;
+            font-style: italic;
         }
-        .buttons {
-            margin: 50px auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+
+        nav {
+            background-color: #111;
+            padding: 22px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .btn {
-            background-color: #1a1a1a;
-            color: #d4af37;
-            padding: 20px 30px;
-            border-radius: 12px;
+
+        nav a {
+            color: var(--text);
             text-decoration: none;
-            font-size: 1.3rem;
-            border: 2px solid #444;
-            min-width: 280px;
+            margin: 0 20px;
+            font-size: 1.25rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            transition: all 0.4s;
         }
-        .btn:hover {
-            background-color: #d4af37;
+
+        nav a:hover {
+            background-color: var(--accent);
             color: #000;
-            border-color: #d4af37;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            color: var(--accent);
+            margin: 60px 0 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--accent);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            width: 90%;
+            max-width: 820px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+        }
+
+        .modal-header {
+            padding: 20px 25px;
+            background: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: var(--accent);
+        }
+
+        .close {
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .modal-body {
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .list-item {
+            display: block;
+            padding: 18px 22px;
+            background: #222;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            color: var(--text);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .list-item:hover {
+            background: #2a2a2a;
+            padding-left: 28px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>Sereno Historia</h1>
-    <p>Imperios, batallas y líderes</p>
+    <header>
+        <h1>Sereno Historia</h1>
+        <p class="subtitle">Imperios • Batallas • Líderes</p>
+    </header>
 
-    <div class="buttons">
-        <a href="imperios.html" class="btn">Imperios</a>
-        <a href="batallas.html" class="btn">Batallas</a>
-        <a href="lideres.html" class="btn">Líderes</a>
-        <a href="bulgaria.html" class="btn">Nación Búlgara</a>
-        <a href="serbia.html" class="btn">Nación Serbia</a>
-        <a href="croacia.html" class="btn">Nación Croata</a>
-        <a href="armenia.html" class="btn">Nación Armenia</a>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="imperios.html">Imperios</a>
+        <a href="batallas.html">Batallas</a>
+        <a href="lideres.html">Líderes</a>
+    </nav>
+
+    <main>
+        <h2 class="section-title">Explora la Historia</h2>
+        
+        <div class="grid">
+            <div class="card" onclick="openModal('antiguedad')">
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grandes civilizaciones clásicas</p>
+            </div>
+
+            <div class="card" onclick="openModal('medievales')">
+                <span class="emoji">🏰</span>
+                <h3>Naciones Medievales</h3>
+                <p>Reinos y pueblos de la Edad Media</p>
+            </div>
+
+            <div class="card" onclick="openModal('construcciones')">
+                <span class="emoji">🏛️</span>
+                <h3>Construcciones Históricas</h3>
+                <p>Maravillas arquitectónicas</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">👑</span>
+                <h3>Personajes Históricos</h3>
+                <p>Líderes legendarios</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">⚔️</span>
+                <h3>Batallas</h3>
+                <p>Las grandes contiendas</p>
+            </div>
+
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">💰</span>
+                <h3>Monedas</h3>
+                <p>Historia del dinero antiguo</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <span class="close" onclick="closeModal()">×</span>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
     </div>
 
-    <p style="margin-top: 80px; color: #777;">
-        Estamos reconstruyendo la página principal.<br>
-        Las páginas individuales ya están creadas.
-    </p>
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Hecho con pasión por la historia</p>
+    </footer>
+
+    <script>
+        function openModal(category) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+            let html = '';
+
+            if (category === 'medievales') {
+                title.textContent = 'Naciones Medievales';
+                html = `
+                    <a href="bulgaria.html" class="list-item">Nación Búlgara</a>
+                    <a href="serbia.html" class="list-item">Nación Serbia</a>
+                    <a href="croacia.html" class="list-item">Nación Croata</a>
+                    <a href="armenia.html" class="list-item">Nación Armenia</a>
+                    <a href="#" class="list-item">Nación Georgiana</a>
+                    <a href="#" class="list-item">Nación Rusa</a>
+                    <a href="#" class="list-item">Nación Húngara</a>
+                    <a href="#" class="list-item">Nación Polaca</a>
+                    <a href="#" class="list-item">Nación Escocesa</a>
+                    <a href="#" class="list-item">Nación Española</a>
+                    <a href="#" class="list-item">Nación Inglesa</a>
+                    <a href="#" class="list-item">Nación Italiana</a>
+                    <a href="#" class="list-item">Nación Portuguesa</a>
+                    <a href="#" class="list-item">Nación Francesa</a>
+                    <a href="#" class="list-item">Sacro Imperio Romano Germánico</a>
+                    <a href="#" class="list-item">Anglosajones</a>
+                    <a href="#" class="list-item">Normandos</a>
+                    <a href="#" class="list-item">Hunos</a>
+                    <a href="#" class="list-item">Nórdicos / Vikingos</a>
+                    <a href="#" class="list-item">Naciones Túrquicas</a>
+                    <a href="#" class="list-item">Nación Iraní</a>
+                    <a href="#" class="list-item">Mongoles</a>
+                    <a href="#" class="list-item">Nación China</a>
+                    <a href="#" class="list-item">Nación India</a>
+                    <a href="#" class="list-item">Otomanos</a>
+                `;
+            } 
+            else if (category === 'construcciones') {
+                title.textContent = 'Construcciones Históricas';
+                html = `
+                    <a href="#" class="list-item">Borgund Stavkirke</a>
+                    <a href="#" class="list-item">Castillo de Bran</a>
+                    <a href="#" class="list-item">Castillo de la Isla de Trakai</a>
+                    <a href="#" class="list-item">Catedral de Etchmiadzin</a>
+                    <a href="#" class="list-item">Ciudad armenia de Ani</a>
+                    <a href="#" class="list-item">Ciudad subterránea de Derinkuyu</a>
+                    <a href="#" class="list-item">Fortaleza de Alamut</a>
+                    <a href="#" class="list-item">Gran Mezquita de Samarra</a>
+                    <a href="#" class="list-item">Iglesias excavadas en la roca de Lalibela</a>
+                    <a href="#" class="list-item">Iglesia de San Ciriaco de Gernrode</a>
+                    <a href="#" class="list-item">Mausoleo de Halicarnaso</a>
+                    <a href="#" class="list-item">Mausoleo de los emires Qara Qoyunlu</a>
+                    <a href="#" class="list-item">Mausoleo de Teodorico</a>
+                    <a href="#" class="list-item">Mausoleo real de Mauritania</a>
+                    <a href="#" class="list-item">Palacio de Knossos</a>
+                    <a href="#" class="list-item">Santa Maria Novella</a>
+                    <a href="#" class="list-item">Teatro de Aspendios</a>
+                    <a href="#" class="list-item">Torre de Hércules</a>
+                    <a href="#" class="list-item">Tumba de Ciro el Grande</a>
+                `;
+            }
+
+            body.innerHTML = html;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.id === 'modal') {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
