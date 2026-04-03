@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Escocesa - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=160') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Escocia</h1>
+            <p>Siglos IX - 1707 • Reino Medieval Escocés</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html" class="active">Nación Escocesa</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Reino de Escocia fue un estado independiente durante casi 800 años, conocido por su feroz resistencia contra Inglaterra y su rica cultura celta y gaélica.
+        </p>
+
+        <section>
+            <h2>Orígenes y Unificación</h2>
+            <p>En el siglo IX, Kenneth MacAlpin unificó los reinos de los pictos y los escotos, creando el Reino de Alba (Escocia). 
+            La Batalla de Bannockburn (1314) bajo Robert the Bruce fue una de las victorias más importantes contra Inglaterra.</p>
+        </section>
+
+        <section>
+            <h2>Guerras de Independencia</h2>
+            <p>Escocia luchó durante siglos por su independencia contra el Reino de Inglaterra. 
+            Figuras como William Wallace y Robert the Bruce se convirtieron en símbolos nacionales de resistencia.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=170" alt="Reino de Escocia">
+        </section>
+
+        <section>
+            <h2>Cultura y Legado</h2>
+            <p>Escocia desarrolló una fuerte identidad gaélica, con clanes, tartanes y una rica tradición literaria y musical. 
+            La Declaración de Arbroath (1320) es considerada una de las primeras declaraciones de independencia de la historia.</p>
+        </section>
+
+        <section>
+            <h2>La Unión con Inglaterra</h2>
+            <p>En 1707, Escocia se unió a Inglaterra para formar el Reino de Gran Bretaña. 
+            Sin embargo, su identidad cultural y nacional ha permanecido fuerte hasta hoy.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Escocia contribuyó enormemente a la Ilustración Escocesa, la ciencia y la ingeniería. 
+            Su historia de independencia y su espíritu guerrero siguen siendo parte esencial de su identidad.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Escocesa</p>
+    </footer>
+</body>
+</html>
