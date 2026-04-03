@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Inglesa - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=200') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Inglaterra</h1>
+            <p>Siglos X - 1707 • Inglaterra Medieval</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html">Nación Española</a>
+        <a href="inglaterra.html" class="active">Nación Inglesa</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Reino de Inglaterra medieval surgió de la unificación de los reinos anglosajones y se consolidó tras la conquista normanda de 1066. 
+            Fue uno de los reinos más poderosos y estables de Europa Occidental.
+        </p>
+
+        <section>
+            <h2>La Conquista Normanda (1066)</h2>
+            <p>Guillermo el Conquistador derrotó al rey Haroldo II en la Batalla de Hastings. 
+            Esta conquista introdujo el feudalismo normando y el francés como lengua de la corte durante siglos.</p>
+        </section>
+
+        <section>
+            <h2>La Carta Magna (1215)</h2>
+            <p>El rey Juan sin Tierra se vio obligado a firmar la Carta Magna, uno de los documentos más importantes de la historia del constitucionalismo. 
+            Limitaba el poder real y establecía derechos fundamentales.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=210" alt="Reino de Inglaterra">
+        </section>
+
+        <section>
+            <h2>La Guerra de los Cien Años</h2>
+            <p>Entre 1337 y 1453, Inglaterra luchó contra Francia por el trono francés. 
+            Figuras como Eduardo III, el Príncipe Negro y Enrique V marcaron esta larga contienda.</p>
+        </section>
+
+        <section>
+            <h2>La Guerra de las Dos Rosas</h2>
+            <p>La guerra civil entre las casas de Lancaster y York (1455-1487) terminó con la victoria de Enrique Tudor (Enrique VII), quien fundó la dinastía Tudor.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Inglaterra medieval sentó las bases del sistema parlamentario inglés y del common law. 
+            Su historia de luchas internas y expansión influyó profundamente en la formación del Reino Unido y el Imperio Británico.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Inglesa</p>
+    </footer>
+</body>
+</html>
