@@ -56,4 +56,132 @@
             margin: 0 20px;
             font-size: 1.25rem;
             padding: 14px 28px;
-            border-radius:
+            border-radius: 50px;
+            transition: all 0.4s;
+        }
+
+        nav a:hover {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            color: var(--accent);
+            margin: 60px 0 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--accent);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            width: 90%;
+            max-width: 820px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+        }
+
+        .modal-header {
+            padding: 20px 25px;
+            background: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: var(--accent);
+        }
+
+        .close {
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .modal-body {
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .list-item {
+            display: block;
+            padding: 18px 22px;
+            background: #222;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            color: var(--text);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .list-item:hover {
+            background: #2a2a2a;
+            padding-left: 28px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sereno Historia</h1>
+        <p class="subtitle">Imperios • Batallas • Líderes</p>
+    </header
