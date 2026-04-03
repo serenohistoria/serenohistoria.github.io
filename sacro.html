@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacro Imperio Romano Germánico - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=280') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Sacro Imperio Romano Germánico</h1>
+            <p>Siglos X - 1806 • El Imperio Medieval Alemán</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html">Nación Española</a>
+        <a href="inglaterra.html">Nación Inglesa</a>
+        <a href="italia.html">Nación Italiana</a>
+        <a href="portugal.html">Nación Portuguesa</a>
+        <a href="francia.html">Nación Francesa</a>
+        <a href="sacro.html" class="active">Sacro Imperio Romano Germánico</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Sacro Imperio Romano Germánico fue uno de los estados más importantes y duraderos de la Europa medieval. 
+            Considerado sucesor del Imperio Romano de Occidente y del Imperio Carolingio.
+        </p>
+
+        <section>
+            <h2>Origen (962)</h2>
+            <p>Otón I el Grande fue coronado emperador en Roma en el año 962, marcando el nacimiento oficial del Sacro Imperio. 
+            Combinaba el poder alemán con la idea de un imperio cristiano universal.</p>
+        </section>
+
+        <section>
+            <h2>Estructura Política</h2>
+            <p>Era una monarquía electiva: los emperadores eran elegidos por los príncipes electores (reyes, duques y arzobispos). 
+            No tenía una capital fija y su poder variaba mucho según el emperador.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=290" alt="Sacro Imperio Romano Germánico">
+        </section>
+
+        <section>
+            <h2>Conflictos con el Papado</h2>
+            <p>La Lucha de las Investiduras (siglo XI) enfrentó a emperadores como Enrique IV con los papas. 
+            Más tarde, la Querella de las Investiduras y el conflicto con los güelfos y gibelinos marcaron su historia.</p>
+        </section>
+
+        <section>
+            <h2>La Edad de Oro y Declive</h2>
+            <p>Bajo los Hohenstaufen (Federico Barbarroja y Federico II) alcanzó gran esplendor. 
+            Tras la Paz de Westfalia (1648) perdió gran parte de su poder real, convirtiéndose en una confederación de estados casi independientes.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>El Sacro Imperio fue el centro del mundo germánico medieval y un símbolo de la unidad cristiana de Europa. 
+            Influyó profundamente en la historia de Alemania, Austria, Italia y el desarrollo del federalismo europeo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Sacro Imperio Romano Germánico</p>
+    </footer>
+</body>
+</html>
