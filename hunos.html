@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunos - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=340') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Los Hunos</h1>
+            <p>Siglos IV - V • El Imperio de Atila</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html">Nación Española</a>
+        <a href="inglaterra.html">Nación Inglesa</a>
+        <a href="italia.html">Nación Italiana</a>
+        <a href="portugal.html">Nación Portuguesa</a>
+        <a href="francia.html">Nación Francesa</a>
+        <a href="sacro.html">Sacro Imperio Romano Germánico</a>
+        <a href="anglosajones.html">Anglosajones</a>
+        <a href="normandos.html">Normandos</a>
+        <a href="hunos.html" class="active">Hunos</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            Los hunos fueron un pueblo nómada de origen centroasiático que irrumpió en Europa en el siglo IV, causando grandes migraciones y aterrorizando al Imperio Romano.
+        </p>
+
+        <section>
+            <h2>Origen y Llegada a Europa</h2>
+            <p>Probablemente originarios de las estepas de Asia Central (posiblemente relacionados con los xiongnu). 
+            En el año 370 cruzaron el Volga y derrotaron a los alanos y ostrogodos, desencadenando las grandes migraciones de los pueblos germánicos.</p>
+        </section>
+
+        <section>
+            <h2>El Imperio de Atila (434-453)</h2>
+            <p>Bajo el liderazgo de Atila (llamado "El Azote de Dios"), los hunos crearon un vasto imperio que se extendía desde el Mar Caspio hasta el Rin. 
+            Exigían tributos al Imperio Romano de Oriente y Occidente.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=350" alt="Hunos">
+        </section>
+
+        <section>
+            <h2>La Batalla de los Campos Cataláunicos (451)</h2>
+            <p>En una de las batallas más grandes de la Antigüedad Tardía, Atila fue detenido por una coalición romano-visigoda liderada por Flavio Aecio. 
+            Fue la última gran victoria del Imperio Romano de Occidente.</p>
+        </section>
+
+        <section>
+            <h2>Muerte de Atila y Desintegración</h2>
+            <p>Atila murió en 453 durante su noche de bodas. Sin su liderazgo carismático, el imperio huno se fragmentó rápidamente y desapareció en pocos años.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Aunque su imperio fue efímero, los hunos aceleraron la caída del Imperio Romano de Occidente y provocaron grandes movimientos de pueblos que dieron forma a la Europa medieval. 
+            Su nombre quedó asociado al terror y a la figura legendaria de Atila.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Hunos</p>
+    </footer>
+</body>
+</html>
