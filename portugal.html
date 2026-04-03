@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Portuguesa - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=240') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de Portugal</h1>
+            <p>Siglos XII - XV • Nación Portuguesa Medieval</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html">Nación Española</a>
+        <a href="inglaterra.html">Nación Inglesa</a>
+        <a href="italia.html">Nación Italiana</a>
+        <a href="portugal.html" class="active">Nación Portuguesa</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            Portugal surgió como un pequeño condado en el noroeste de la Península Ibérica y se convirtió en uno de los reinos más audaces de la Edad Media, iniciando la Era de los Descubrimientos.
+        </p>
+
+        <section>
+            <h2>La Independencia (1143)</h2>
+            <p>Tras la Batalla de Ourique (1139), Alfonso Henriques se proclamó rey. 
+            En 1143 el Reino de Portugal fue reconocido oficialmente, separándose del Reino de León.</p>
+        </section>
+
+        <section>
+            <h2>La Reconquista Portuguesa</h2>
+            <p>Los portugueses completaron su Reconquista mucho antes que Castilla: tomaron Lisboa en 1147 con ayuda de cruzados ingleses y alemanes.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=250" alt="Reino de Portugal">
+        </section>
+
+        <section>
+            <h2>La Dinastía de Avis y los Descubrimientos</h2>
+            <p>Bajo la dinastía de Avis (1385-1580), Portugal inició la expansión marítima. 
+            Enrique el Navegante organizó expediciones a África, llegando a Madeira, Azores y más tarde a la India y Brasil.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>Portugal fue la primera nación europea en crear un imperio marítimo global. 
+            Su lengua y cultura se extendieron por Brasil, África, India y Asia, dejando un legado duradero en la historia mundial.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Portuguesa</p>
+    </footer>
+</body>
+</html>
