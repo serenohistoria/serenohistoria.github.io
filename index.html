@@ -1,376 +1,356 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sereno Historia | Imperios, Batallas y Líderes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereno Historia | Imperios, Batallas y Líderes</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #161616;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
 
-<style>
-:root {
-    --bg: #0a0a0a;
-    --card: #161616;
-    --accent: #d4af37;
-    --text: #f0f0f0;
-    --text-light: #aaaaaa;
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-}
+        header {
+            background: linear-gradient(to bottom, #1c1c1c, var(--bg));
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 6px solid var(--accent);
+        }
 
-/* HEADER */
-header {
-    background: linear-gradient(to bottom, #1c1c1c, var(--bg));
-    padding: 80px 20px 60px;
-    text-align: center;
-    border-bottom: 6px solid var(--accent);
-}
+        h1 {
+            font-size: 4.2rem;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
 
-h1 {
-    font-size: 4rem;
-    color: var(--accent);
-    text-shadow: 0 0 30px rgba(212,175,55,0.5);
-}
+        .subtitle {
+            font-size: 1.7rem;
+            color: #cccccc;
+            font-style: italic;
+        }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: #ccc;
-    font-style: italic;
-}
+        nav {
+            background-color: #111;
+            padding: 22px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-/* NAV */
-nav {
-    background: #111;
-    padding: 18px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-}
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.25rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            transition: all 0.4s;
+        }
 
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: .3s;
-}
+        nav a:hover {
+            background-color: var(--accent);
+            color: #000;
+        }
 
-nav a:hover {
-    background: var(--accent);
-    color: #000;
-}
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
 
-/* MAIN */
-main {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            color: var(--accent);
+            margin: 60px 0 50px;
+        }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin-bottom: 40px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-}
+        .card {
+            background-color: var(--card);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
 
-/* CARD */
-.card {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 35px;
-    text-align: center;
-    border: 1px solid #333;
-    cursor: pointer;
-    transition: .4s;
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
 
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s ease forwards;
-}
+        .emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
-    box-shadow: 0 15px 35px rgba(212,175,55,0.2);
-}
+        .card h3 {
+            color: var(--accent);
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
 
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-}
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
 
-.emoji {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
+        .modal-content {
+            background: #1a1a1a;
+            width: 90%;
+            max-width: 820px;
+            max-height: 85vh;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--accent);
+        }
 
-.card h3 {
-    color: var(--accent);
-    margin-bottom: 10px;
-}
+        .modal-header {
+            padding: 20px 25px;
+            background: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.card p {
-    color: var(--text-light);
-}
+        .modal-header h2 {
+            color: var(--accent);
+        }
 
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.9);
-    align-items:center;
-    justify-content:center;
-}
+        .close {
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: #aaa;
+        }
 
-.modal-content {
-    background:#1a1a1a;
-    width:90%;
-    max-width:800px;
-    border-radius:16px;
-    border:2px solid var(--accent);
-    overflow:hidden;
-}
+        .modal-body {
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
 
-.modal-header {
-    background:#222;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-}
+        .list-item {
+            display: block;
+            padding: 18px 22px;
+            background: #222;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            color: var(--text);
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-.modal-body {
-    padding:20px;
-    max-height:60vh;
-    overflow-y:auto;
-}
+        .list-item:hover {
+            background: #2a2a2a;
+            padding-left: 28px;
+        }
 
-.close {
-    cursor:pointer;
-    font-size:2rem;
-}
-
-.list-item {
-    display:block;
-    padding:15px;
-    margin-bottom:10px;
-    background:#222;
-    border-radius:10px;
-    text-decoration:none;
-    color:var(--text);
-    transition:.3s;
-}
-
-.list-item:hover {
-    background:#2a2a2a;
-    padding-left:20px;
-}
-
-/* RESPONSIVE */
-@media (max-width:600px){
-    h1{font-size:2.5rem;}
-    nav a{display:block;margin:8px 0;}
-}
-
-footer {
-    text-align:center;
-    padding:50px;
-    color:#555;
-}
-</style>
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Sereno Historia</h1>
+        <p class="subtitle">Imperios • Batallas • Líderes</p>
+    </header>
 
-<header>
-<h1>Sereno Historia</h1>
-<p class="subtitle">Imperios • Batallas • Líderes</p>
-</header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="imperios.html">Imperios</a>
+        <a href="batallas.html">Batallas</a>
+        <a href="lideres.html">Líderes</a>
+    </nav>
 
-<nav>
-<a href="#">Inicio</a>
-<a href="#">Imperios</a>
-<a href="#">Batallas</a>
-<a href="#">Líderes</a>
-</nav>
+    <main>
+        <h2 class="section-title">Explora la Historia</h2>
+        
+        <div class="grid">
+            <div class="card" onclick="openModal('antiguedad')">
+                <span class="emoji">🏛️</span>
+                <h3>Naciones de la Antigüedad</h3>
+                <p>Grandes civilizaciones clásicas</p>
+            </div>
 
-<main>
-<h2 class="section-title">Explora la Historia</h2>
+            <div class="card" onclick="openModal('medievales')">
+                <span class="emoji">🏰</span>
+                <h3>Naciones Medievales</h3>
+                <p>Reinos y pueblos de la Edad Media</p>
+            </div>
 
-<div class="grid">
+            <div class="card" onclick="openModal('construcciones')">
+                <span class="emoji">🏛️</span>
+                <h3>Construcciones Históricas</h3>
+                <p>Maravillas arquitectónicas</p>
+            </div>
 
-<div class="card" onclick="openModal('antiguedad')">
-<span class="emoji">🏛️</span>
-<h3>Naciones de la Antigüedad</h3>
-<p>Grandes civilizaciones clásicas</p>
-</div>
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">👑</span>
+                <h3>Personajes Históricos</h3>
+                <p>Líderes legendarios</p>
+            </div>
 
-<div class="card" onclick="openModal('medievales')">
-<span class="emoji">🏰</span>
-<h3>Naciones Medievales</h3>
-<p>Reinos y pueblos de la Edad Media</p>
-</div>
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">⚔️</span>
+                <h3>Batallas</h3>
+                <p>Las grandes contiendas</p>
+            </div>
 
-<div class="card" onclick="openModal('construcciones')">
-<span class="emoji">🏛️</span>
-<h3>Construcciones Históricas</h3>
-<p>Maravillas arquitectónicas</p>
-</div>
+            <div class="card" onclick="alert('Próximamente más contenido')">
+                <span class="emoji">💰</span>
+                <h3>Monedas</h3>
+                <p>Historia del dinero antiguo</p>
+            </div>
+        </div>
+    </main>
 
-<div class="card" onclick="alert('Próximamente')">
-<span class="emoji">👑</span>
-<h3>Personajes Históricos</h3>
-<p>Líderes legendarios</p>
-</div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <span class="close" onclick="closeModal()">×</span>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
 
-<div class="card" onclick="alert('Próximamente')">
-<span class="emoji">⚔️</span>
-<h3>Batallas</h3>
-<p>Grandes conflictos</p>
-</div>
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Hecho con pasión por la historia</p>
+    </footer>
 
-<div class="card" onclick="alert('Próximamente')">
-<span class="emoji">💰</span>
-<h3>Monedas</h3>
-<p>Historia del dinero</p>
-</div>
+    <script>
+        function openModal(category) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+            let html = '';
 
-</div>
-</main>
+            if (category === 'antiguedad') {
+                title.textContent = 'Naciones de la Antigüedad';
+                html = `
+                    <a href="#" class="list-item">Asirios</a>
+                    <a href="#" class="list-item">Axum</a>
+                    <a href="#" class="list-item">Cartago</a>
+                    <a href="#" class="list-item">Dacia</a>
+                    <a href="#" class="list-item">Gasánidas</a>
+                    <a href="#" class="list-item">Heftalitas</a>
+                    <a href="#" class="list-item">Hititas</a>
+                    <a href="#" class="list-item">Hunos</a>
+                    <a href="#" class="list-item">Israel</a>
+                    <a href="#" class="list-item">Lajmidas</a>
+                    <a href="#" class="list-item">Lidia</a>
+                    <a href="#" class="list-item">Media Atropatene</a>
+                    <a href="#" class="list-item">Mitanni</a>
+                    <a href="#" class="list-item">Mundo Helenístico</a>
+                    <a href="#" class="list-item">Nabatea</a>
+                    <a href="#" class="list-item">Numidia</a>
+                    <a href="#" class="list-item">Osroene</a>
+                    <a href="#" class="list-item">Palmira</a>
+                    <a href="#" class="list-item">Pueblos Escitas</a>
+                    <a href="#" class="list-item">Roma</a>
+                    <a href="#" class="list-item">Saba</a>
+                `;
+            } 
+            else if (category === 'medievales') {
+                title.textContent = 'Naciones Medievales';
+                html = `
+                    <a href="bulgaria.html" class="list-item">Nación Búlgara</a>
+                    <a href="serbia.html" class="list-item">Nación Serbia</a>
+                    <a href="croacia.html" class="list-item">Nación Croata</a>
+                    <a href="armenia.html" class="list-item">Nación Armenia</a>
+                    <a href="georgia.html" class="list-item">Nación Georgiana</a>
+                    <a href="#" class="list-item">Nación Rusa</a>
+                    <a href="#" class="list-item">Nación Húngara</a>
+                    <a href="#" class="list-item">Nación Polaca</a>
+                    <a href="#" class="list-item">Nación Escocesa</a>
+                    <a href="#" class="list-item">Nación Española</a>
+                    <a href="#" class="list-item">Nación Inglesa</a>
+                    <a href="#" class="list-item">Nación Italiana</a>
+                    <a href="#" class="list-item">Nación Portuguesa</a>
+                    <a href="#" class="list-item">Nación Francesa</a>
+                    <a href="#" class="list-item">Sacro Imperio Romano Germánico</a>
+                    <a href="#" class="list-item">Anglosajones</a>
+                    <a href="#" class="list-item">Normandos</a>
+                    <a href="#" class="list-item">Hunos</a>
+                    <a href="#" class="list-item">Nórdicos / Vikingos</a>
+                    <a href="#" class="list-item">Naciones Túrquicas</a>
+                    <a href="#" class="list-item">Nación Iraní</a>
+                    <a href="#" class="list-item">Mongoles</a>
+                    <a href="#" class="list-item">Nación China</a>
+                    <a href="#" class="list-item">Nación India</a>
+                    <a href="#" class="list-item">Otomanos</a>
+                `;
+            } 
+            else if (category === 'construcciones') {
+                title.textContent = 'Construcciones Históricas';
+                html = `
+                    <a href="#" class="list-item">Borgund Stavkirke</a>
+                    <a href="#" class="list-item">Castillo de Bran</a>
+                    <a href="#" class="list-item">Castillo de la Isla de Trakai</a>
+                    <a href="#" class="list-item">Catedral de Etchmiadzin</a>
+                    <a href="#" class="list-item">Ciudad armenia de Ani</a>
+                    <a href="#" class="list-item">Ciudad subterránea de Derinkuyu</a>
+                    <a href="#" class="list-item">Fortaleza de Alamut</a>
+                    <a href="#" class="list-item">Gran Mezquita de Samarra</a>
+                    <a href="#" class="list-item">Iglesias excavadas en la roca de Lalibela</a>
+                    <a href="#" class="list-item">Iglesia de San Ciriaco de Gernrode</a>
+                    <a href="#" class="list-item">Mausoleo de Halicarnaso</a>
+                    <a href="#" class="list-item">Mausoleo de los emires Qara Qoyunlu</a>
+                    <a href="#" class="list-item">Mausoleo de Teodorico</a>
+                    <a href="#" class="list-item">Mausoleo real de Mauritania</a>
+                    <a href="#" class="list-item">Palacio de Knossos</a>
+                    <a href="#" class="list-item">Santa Maria Novella</a>
+                    <a href="#" class="list-item">Teatro de Aspendios</a>
+                    <a href="#" class="list-item">Torre de Hércules</a>
+                    <a href="#" class="list-item">Tumba de Ciro el Grande</a>
+                `;
+            }
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-<div class="modal-content">
-<div class="modal-header">
-<h2 id="modal-title"></h2>
-<span class="close" onclick="closeModal()">×</span>
-</div>
-<div class="modal-body" id="modal-body"></div>
-</div>
-</div>
+            body.innerHTML = html;
+            modal.style.display = 'flex';
+        }
 
-<footer>
-<p>© 2026 Sereno Historia</p>
-</footer>
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-<script>
-
-function openModal(cat){
-const modal=document.getElementById('modal');
-const title=document.getElementById('modal-title');
-const body=document.getElementById('modal-body');
-
-let html='';
-
-if(cat==='antiguedad'){
-title.textContent='Naciones de la Antigüedad';
-html=`
-<a class="list-item">Asirios</a>
-<a class="list-item">Axum</a>
-<a class="list-item">Cartago</a>
-<a class="list-item">Dacia</a>
-<a class="list-item">Gasánidas</a>
-<a class="list-item">Heftalitas</a>
-<a class="list-item">Hititas</a>
-<a class="list-item">Hunos</a>
-<a class="list-item">Israel</a>
-<a class="list-item">Lajmidas</a>
-<a class="list-item">Lidia</a>
-<a class="list-item">Media Atropatene</a>
-<a class="list-item">Mitanni</a>
-<a class="list-item">Mundo Helenístico</a>
-<a class="list-item">Nabatea</a>
-<a class="list-item">Numidia</a>
-<a class="list-item">Osroene</a>
-<a class="list-item">Palmira</a>
-<a class="list-item">Pueblos Escitas</a>
-<a class="list-item">Roma</a>
-<a class="list-item">Saba</a>
-`;
-}
-
-if(cat==='medievales'){
-title.textContent='Naciones Medievales';
-html=`
-<a href="bulgaros.html" class="list-item">Búlgaros</a>
-<a class="list-item">Serbios</a>
-<a class="list-item">Croatas</a>
-<a class="list-item">Armenios</a>
-<a class="list-item">Georgianos</a>
-<a class="list-item">Rusos</a>
-<a class="list-item">Húngaros</a>
-<a class="list-item">Polacos</a>
-<a class="list-item">Escoceses</a>
-<a class="list-item">Españoles</a>
-<a class="list-item">Ingleses</a>
-<a class="list-item">Italianos</a>
-<a class="list-item">Portugueses</a>
-<a class="list-item">Franceses</a>
-<a class="list-item">Sacro Imperio Romano Germánico</a>
-<a class="list-item">Anglosajones</a>
-<a class="list-item">Normandos</a>
-<a class="list-item">Hunos</a>
-<a class="list-item">Vikingos</a>
-<a class="list-item">Túrquicos</a>
-<a class="list-item">Iraníes</a>
-<a class="list-item">Mongoles</a>
-<a class="list-item">Chinos</a>
-<a class="list-item">Indios</a>
-<a class="list-item">Otomanos</a>
-`;
-}
-
-if(cat==='construcciones'){
-title.textContent='Construcciones Históricas';
-html=`
-<a class="list-item">Borgund</a>
-<a class="list-item">Castillo de Bran</a>
-<a class="list-item">Trakai</a>
-<a class="list-item">Etchmiadzin</a>
-<a class="list-item">Ani</a>
-<a class="list-item">Derinkuyu</a>
-<a class="list-item">Alamut</a>
-<a class="list-item">Samarra</a>
-<a class="list-item">Lalibela</a>
-<a class="list-item">Gernrode</a>
-<a class="list-item">Halicarnaso</a>
-<a class="list-item">Qara Qoyunlu</a>
-<a class="list-item">Teodorico</a>
-<a class="list-item">Mauritania</a>
-<a class="list-item">Knossos</a>
-<a class="list-item">Santa Maria Novella</a>
-<a class="list-item">Aspendos</a>
-<a class="list-item">Torre de Hércules</a>
-<a class="list-item">Ciro el Grande</a>
-`;
-}
-
-body.innerHTML=html;
-modal.style.display='flex';
-}
-
-function closeModal(){
-document.getElementById('modal').style.display='none';
-}
-
-window.onclick=function(e){
-if(e.target.id==='modal'){closeModal();}
-}
-
-</script>
-
+        window.onclick = function(event) {
+            if (event.target.id === 'modal') {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
