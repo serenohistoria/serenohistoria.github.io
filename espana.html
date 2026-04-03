@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Española - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=180') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Reino de España</h1>
+            <p>Edad Media • Corona de Castilla y Aragón (Siglos XI - XV)</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html" class="active">Nación Española</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            La Nación Española medieval se formó a partir de la unión de los reinos cristianos de la Península Ibérica durante la Reconquista contra los musulmanes de Al-Ándalus.
+        </p>
+
+        <section>
+            <h2>La Reconquista</h2>
+            <p>Desde la Batalla de Covadonga (722) hasta la toma de Granada en 1492, los reinos cristianos (Castilla, Aragón, Navarra y Portugal) lucharon durante casi 8 siglos para recuperar la península.</p>
+        </section>
+
+        <section>
+            <h2>La Unión de Castilla y Aragón</h2>
+            <p>El matrimonio de Isabel I de Castilla y Fernando II de Aragón en 1469 unificó los dos reinos más poderosos. 
+            En 1492 completaron la Reconquista con la toma de Granada y financiaron el viaje de Cristóbal Colón.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=190" alt="Reyes Católicos">
+        </section>
+
+        <section>
+            <h2>Cultura y Legado</h2>
+            <p>La España medieval fue un crisol de culturas (cristiana, musulmana y judía). 
+            Destacan la Universidad de Salamanca, la arquitectura mudéjar y el Camino de Santiago.</p>
+        </section>
+
+        <section>
+            <h2>El Fin de la Edad Media</h2>
+            <p>Con la caída de Granada en 1492 y el descubrimiento de América, España entró en la Edad Moderna como una de las mayores potencias mundiales.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>La Nación Española medieval dejó un enorme legado lingüístico, religioso y cultural que influyó en gran parte de América y Europa.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Española</p>
+    </footer>
+</body>
+</html>
