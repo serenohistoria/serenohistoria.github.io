@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Rusa - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=100') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Rus de Kiev y Rusia Medieval</h1>
+            <p>Siglos IX - XV</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html" class="active">Nación Rusa</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            El Rus de Kiev fue el primer estado eslavo oriental importante, considerado el precursor histórico de Rusia, Ucrania y Bielorrusia.
+        </p>
+
+        <section>
+            <h2>Fundación del Rus de Kiev</h2>
+            <p>Según la tradición, en el siglo IX los varegos (vikingos) liderados por Rurik se establecieron en Nóvgorod. 
+            Su sucesor Oleg conquistó Kiev en 882, creando el Rus de Kiev, un poderoso estado que controlaba la ruta comercial "de los varegos a los griegos".</p>
+        </section>
+
+        <section>
+            <h2>La Cristianización (988)</h2>
+            <p>El príncipe Vladímir I el Grande adoptó el cristianismo ortodoxo en el año 988, bautizando a todo el pueblo. 
+            Esto marcó el inicio de la fuerte influencia bizantina en la cultura rusa.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=110" alt="Rus de Kiev">
+        </section>
+
+        <section>
+            <h2>La Invasión Mongola y el Principado de Moscú</h2>
+            <p>En 1237-1240 los mongoles destruyeron el Rus de Kiev. Tras la dominación mongola, el Principado de Moscú comenzó a crecer bajo la dinastía Rurik, 
+            culminando con Iván III el Grande, quien unificó los territorios rusos y puso fin al yugo mongol.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>El Rus de Kiev sentó las bases de la identidad eslava oriental, la lengua rusa y la Iglesia Ortodoxa Rusa. 
+            Moscú se convirtió en el sucesor político y espiritual del Rus de Kiev.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Rusa</p>
+    </footer>
+</body>
+</html>
