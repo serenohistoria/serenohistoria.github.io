@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nación Italiana - Sereno Historia</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text: #f0f0f0;
+            --text-light: #aaaaaa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://picsum.photos/1200/600?random=220') center/cover no-repeat;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        nav {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Italia Medieval</h1>
+            <p>Siglos V - XV • Ciudades-Estado y Reinos</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="medievales.html">Naciones Medievales</a>
+        <a href="bulgaria.html">Nación Búlgara</a>
+        <a href="serbia.html">Nación Serbia</a>
+        <a href="croacia.html">Nación Croata</a>
+        <a href="armenia.html">Nación Armenia</a>
+        <a href="georgia.html">Nación Georgiana</a>
+        <a href="rusia.html">Nación Rusa</a>
+        <a href="hungria.html">Nación Húngara</a>
+        <a href="polonia.html">Nación Polaca</a>
+        <a href="escocia.html">Nación Escocesa</a>
+        <a href="espana.html">Nación Española</a>
+        <a href="inglaterra.html">Nación Inglesa</a>
+        <a href="italia.html" class="active">Nación Italiana</a>
+    </nav>
+
+    <main>
+        <p class="intro">
+            La Italia medieval no fue un país unificado, sino un mosaico de ciudades-estado, reinos y señoríos. 
+            Fue el centro del Renacimiento y uno de los territorios más ricos y culturalmente avanzados de Europa.
+        </p>
+
+        <section>
+            <h2>La Caída del Imperio Romano y los Reinos Bárbaros</h2>
+            <p>Tras la caída del Imperio Romano de Occidente en 476, Italia fue invadida por ostrogodos, bizantinos y lombardos. 
+            El sur permaneció bajo influencia bizantina durante siglos.</p>
+        </section>
+
+        <section>
+            <h2>Las Ciudades-Estado (Siglos XI-XV)</h2>
+            <p>Venecia, Florencia, Génova, Milán y Siena se convirtieron en poderosas repúblicas mercantiles. 
+            Florencia, bajo los Médici, fue el corazón del Renacimiento.</p>
+            
+            <img src="https://picsum.photos/1000/500?random=230" alt="Italia Medieval">
+        </section>
+
+        <section>
+            <h2>El Papado y los Estados Pontificios</h2>
+            <p>Roma y gran parte del centro de Italia pertenecían al Papado. 
+            El conflicto entre güelfos (partidarios del Papa) y gibelinos (partidarios del Emperador) marcó la política italiana durante siglos.</p>
+        </section>
+
+        <section>
+            <h2>El Renacimiento Italiano</h2>
+            <p>Italia fue la cuna del Renacimiento. Figuras como Leonardo da Vinci, Miguel Ángel, Dante Alighieri y Maquiavelo transformaron el arte, la literatura y el pensamiento político.</p>
+        </section>
+
+        <section>
+            <h2>Legado</h2>
+            <p>La Italia medieval y renacentista dio al mundo el Humanismo, el arte moderno y muchas de las bases de la cultura occidental actual.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sereno Historia • Nación Italiana</p>
+    </footer>
+</body>
+</html>
